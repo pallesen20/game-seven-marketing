@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Seven Marketing | SEO, AI Optimization & CRO for Shopify</title>
+  <meta name="description" content="Game Seven Marketing — niche experts in SEO, AI Optimization and CRO for Shopify e-commerce brands. When you need the A-team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- =====================================================
+       FAQ STRUCTURED DATA (JSON-LD)
+  ====================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does SEO take to show results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Technical SEO fixes can show ranking improvements within weeks. Content and authority-building typically compounds over 3–6 months, after which it accelerates significantly. Most clients see meaningful organic traffic increases within 90 days and substantial revenue impact by month 4–6. Unlike paid ads, the results don't stop when you stop paying — they keep growing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What exactly is AI Optimization (AEO)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Answer Engine Optimization (AEO) means structuring your content, brand authority, and data so that AI tools like ChatGPT, Perplexity, and Google's AI Overviews recommend your products when users ask questions in your category. It's the fastest-growing new acquisition channel in e-commerce, and the brands that establish AI visibility now will compound that advantage for years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with brands at any stage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For CRO specifically, we recommend at least 10,000 monthly sessions to run statistically valid A/B tests. For SEO and AEO, we work with brands at any stage — building the right technical foundation early is far easier than fixing a broken structure later. Book a call and we'll tell you exactly what's right for where you are now."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's your performance guarantee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Within 6 months, we guarantee a measurable improvement in your revenue per visitor from organic channels. If we haven't hit that goal, we keep working at no additional charge until we do. We put our own time on the line because we're confident enough in our process to back it up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "You mention you've built and sold e-commerce brands — how does that help me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means we understand the pressure you're under. We know what a Google algorithm update feels like when it's your own revenue on the line. We've made expensive Shopify mistakes — so we won't make them on your store. We think about your business like owners, not service providers. That's a different kind of engagement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work on platforms other than Shopify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shopify and Shopify Plus are our primary platforms and where we do our deepest, most effective work. We can provide SEO and CRO consulting for WooCommerce and BigCommerce stores, but if you're on Shopify, you'll get the full benefit of our platform-specific expertise — which goes considerably deeper than what any generalist agency can offer."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+
+    /* ============================================================
+       BRAND COLOR — CHANGE THIS ONE VALUE TO RETHEME EVERYTHING
+       ↓ Only edit the hex below ↓
+    ============================================================ */
+    :root {
+      --brand: #00e87a;
+    }
+
+    /* ============================================================
+       FULL DESIGN SYSTEM (derived from --brand)
+    ============================================================ */
+    :root {
+      --bg:       #080b0f;
+      --bg-card:  #0f1318;
+      --bg-card2: #131820;
+      --border:       rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.15);
+      --text:       #f5f5f0;
+      --text-muted: #7a8394;
+      --text-dim:   #4a5260;
+      --accent1: var(--brand);
+      --grad:      linear-gradient(135deg, var(--brand) 0%, #a8ffdb 100%);
+      --grad-text: linear-gradient(135deg, var(--brand) 0%, #a8ffdb 100%);
+      --red:   #ff4d4d;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      /* Prevent font size inflation on iOS */
+      -webkit-text-size-adjust: 100%;
+    }
+    ::selection { background: var(--brand); color: #000; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    .display {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+    .heading {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+    section { padding: 100px 0; position: relative; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent1);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ============================================================
+       BLOBS
+    ============================================================ */
+    .blob { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; opacity: 0.13; }
+    .blob-brand { background: var(--brand); }
+    .blob-teal  { background: #00c9a7; }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: background 0.3s, border-color 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(8,11,15,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom-color: var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; }
+    .nav-logo span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.85rem; color: var(--text-muted); transition: color 0.2s; font-weight: 400; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--brand) !important;
+      color: #000 !important;
+      padding: 0.55rem 1.25rem !important;
+      border-radius: 100px;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      transition: opacity 0.2s, transform 0.2s !important;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      /* Bigger tap target on mobile */
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      min-height: 100svh; /* svh = small viewport height — accounts for mobile browser chrome */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 88px;
+      padding-bottom: 60px;
+      overflow: hidden;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0,232,122,0.08);
+      border: 1px solid rgba(0,232,122,0.2);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.78rem;
+      color: var(--brand);
+      margin-bottom: 2rem;
+      font-weight: 400;
+      width: fit-content;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brand);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+    .hero-title {
+      font-size: clamp(2.8rem, 11vw, 7rem);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title .line {
+      display: block;
+      animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .hero-title .line:nth-child(1) { animation-delay: 0.1s; }
+    .hero-title .line:nth-child(2) { animation-delay: 0.2s; }
+    .hero-title .line:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes slideUp { to { opacity:1; transform:translateY(0); } }
+
+    .hero-sub {
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s 0.5s forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn { to { opacity:1; } }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      animation: fadeIn 1s 0.6s forwards;
+      opacity: 0;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand);
+      color: #000;
+      padding: 0.9rem 1.75rem;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      /* Accessible tap target */
+      min-height: 48px;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,232,122,0.3); opacity: 0.9; }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      padding: 0.9rem 1.75rem;
+      border-radius: 100px;
+      font-weight: 400;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      min-height: 48px;
+      white-space: nowrap;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: var(--border-hover); transform: translateY(-2px); }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: start;
+      gap: 2rem 3rem;
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      animation: fadeIn 1s 0.8s forwards;
+      opacity: 0;
+    }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .stat-label { font-size: 0.82rem; color: var(--text-muted); line-height: 1.35; }
+
+    /* ============================================================
+       MARQUEE
+    ============================================================ */
+    #logos {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .logos-label { text-align: center; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.75rem; }
+    .marquee-wrap {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+    .marquee-track { display: flex; gap: 2.5rem; animation: marquee 22s linear infinite; white-space: nowrap; }
+    .marquee-item { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about {
+      border-top: 1px solid var(--border);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.04), transparent);
+    }
+    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-left h2 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1.5rem; }
+    .about-left p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+    .about-left p em { color: var(--text); font-style: normal; }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+    .founder-block { display: flex; align-items: flex-start; gap: 1rem; }
+    .founder-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--grad);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.1rem;
+      color: #000;
+      flex-shrink: 0;
+    }
+    .founder-info { flex: 1; min-width: 0; }
+    .founder-name-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+    .founder-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; }
+    .founder-linkedin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: #0a66c2;
+      flex-shrink: 0;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .founder-linkedin:hover { opacity: 0.85; transform: scale(1.1); }
+    .founder-linkedin svg { width: 14px; height: 14px; fill: #fff; }
+    .founder-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .founder-bio { font-size: 0.87rem; color: var(--text-muted); line-height: 1.75; }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .about-tag {
+      background: rgba(0,232,122,0.08);
+      border: 1px solid rgba(0,232,122,0.18);
+      color: var(--brand);
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .about-divider { height: 1px; background: var(--border); }
+    .slogan-block { text-align: center; }
+    .slogan-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .slogan-sub { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.35rem; }
+
+    /* ============================================================
+       PAIN POINTS  — 6 spaced cards, 3-col desktop / 2-col tablet / 1-col mobile
+    ============================================================ */
+    #pain {
+      border-top: 1px solid var(--border);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.03), transparent);
+    }
+    .pain-header { max-width: 680px; margin-bottom: 3.5rem; }
+    .pain-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.75rem;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .pain-card:hover { background: var(--bg-card2); border-color: var(--border-hover); }
+
+    /* Custom SVG icon wrapper for pain cards */
+    .pain-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: rgba(0,232,122,0.08);
+      border: 1px solid rgba(0,232,122,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+    .pain-icon svg { width: 22px; height: 22px; stroke: var(--brand); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .pain-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .pain-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services {
+      border-top: 1px solid var(--border);
+      background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0,232,122,0.03), transparent);
+    }
+    .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 4rem; }
+    .services-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+    .services-header p { color: var(--text-muted); font-size: 1rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .svc-card { background: var(--bg-card); padding: 2.25rem; transition: background 0.3s; position: relative; overflow: hidden; }
+    .svc-card:hover { background: var(--bg-card2); }
+    .svc-card.featured { grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; }
+    .svc-card.featured::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(0,232,122,0.1), transparent 70%);
+      pointer-events: none;
+    }
+    .svc-card.span2 { grid-column: 2 / -1; }
+    .svc-num { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent1); text-transform: uppercase; margin-bottom: 0.85rem; }
+    .svc-card h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.9rem; }
+    .svc-card.featured h3 { font-size: 1.85rem; }
+    .svc-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+    .svc-tag { display: inline-block; background: rgba(0,232,122,0.1); color: var(--brand); padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.72rem; margin-top: 1.5rem; font-weight: 500; }
+    .step-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
+    .pill { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 0.25rem 0.8rem; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
+
+    /* ============================================================
+       PROCESS
+    ============================================================ */
+    #process { border-top: 1px solid var(--border); }
+    .process-header { max-width: 600px; margin-bottom: 4.5rem; }
+    .process-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+    .process-step { display: grid; grid-template-columns: 60px 1fr; gap: 2.5rem; padding: 2.75rem 0; border-bottom: 1px solid var(--border); }
+    .process-step:last-child { border-bottom: none; }
+    .step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--text-dim); line-height: 1; padding-top: 0.2rem; }
+    .step-content h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.9rem; }
+    .step-content p { color: var(--text-muted); font-size: 0.9rem; max-width: 640px; line-height: 1.8; }
+
+    /* ============================================================
+       COMPARISON
+    ============================================================ */
+    #compare { border-top: 1px solid var(--border); }
+    .compare-header { text-align: center; margin-bottom: 3.5rem; }
+    .compare-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.9rem; }
+    .compare-header p { color: var(--text-muted); max-width: 480px; margin: 0 auto; font-size: 0.95rem; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; max-width: 880px; margin: 0 auto; }
+    .compare-col { padding: 2.25rem; background: var(--bg-card); }
+    .compare-col.us { background: var(--bg-card2); position: relative; }
+    .compare-col.us::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
+    .compare-col-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 1.75rem; color: var(--text-muted); }
+    .compare-col.us .compare-col-title { color: var(--text); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .compare-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+    .compare-col.us .compare-list li { color: var(--text); }
+    .ci { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
+    .ci.no  { background: rgba(255,77,77,0.15); color: var(--red); }
+    .ci.yes { background: rgba(0,232,122,0.15); color: var(--brand); }
+
+    /* ============================================================
+       ROI CALCULATORS
+    ============================================================ */
+    #roi { border-top: 1px solid var(--border); }
+    .roi-header { margin-bottom: 3.5rem; }
+    .roi-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+    .roi-header p { color: var(--text-muted); max-width: 560px; font-size: 0.95rem; }
+
+    .calc-tabs {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 5px;
+      width: fit-content;
+      flex-wrap: wrap;
+    }
+    .calc-tab {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 10px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.83rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+      min-height: 44px;
+    }
+    .calc-tab svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .calc-tab.active { background: var(--brand); color: #000; }
+    .calc-tab.active svg { stroke: #000; }
+
+    .calc-panel { display: none; }
+    .calc-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+
+    .calc-intro h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+    .calc-intro p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.9rem; }
+    .calc-disclaimer { font-size: 0.78rem; color: var(--text-dim); }
+
+    .calc-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; }
+
+    .roi-field { margin-bottom: 1.4rem; }
+    .roi-field label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.55rem; }
+    .roi-field input[type="number"] {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .roi-field input[type="number"]:focus { border-color: var(--brand); }
+    .roi-field input[type="number"]::-webkit-inner-spin-button { display: none; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--brand); cursor: pointer; }
+    input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--brand); cursor: pointer; border: none; }
+    .range-labels { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; }
+
+    .roi-select-group { display: flex; gap: 0.4rem; }
+    .roi-select-group button {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.7rem;
+      color: var(--text-muted);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-height: 44px;
+    }
+    .roi-select-group button.active { background: var(--brand); border-color: var(--brand); color: #000; font-weight: 600; }
+
+    .roi-result {
+      margin-top: 1.4rem;
+      padding: 1.4rem;
+      background: rgba(0,232,122,0.06);
+      border: 1px solid rgba(0,232,122,0.18);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .roi-result .result-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .roi-result .result-num { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .roi-result .result-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.35rem; }
+    .roi-result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.9rem; }
+    .roi-mini-stat { background: rgba(0,0,0,0.25); border-radius: 10px; padding: 0.7rem; text-align: center; }
+    .roi-mini-stat .mval { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .roi-mini-stat .mlabel { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.15rem; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials { border-top: 1px solid var(--border); }
+    .testimonials-header { margin-bottom: 3.5rem; }
+    .testimonials-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+    .testimonials-scroll { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; }
+    .testi-card { background: var(--bg-card); padding: 2rem; transition: background 0.3s; }
+    .testi-card:hover { background: var(--bg-card2); }
+    .testi-stars { display: flex; gap: 3px; margin-bottom: 1.1rem; }
+    .testi-stars svg { width: 14px; height: 14px; fill: var(--brand); }
+    .testi-quote { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 0.85rem; }
+    .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.85rem; color: #000; flex-shrink: 0; }
+    .testi-name { font-family: 'Syne', sans-serif; font-size: 0.875rem; font-weight: 700; }
+    .testi-role { font-size: 0.75rem; color: var(--text-dim); }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    #faq { border-top: 1px solid var(--border); }
+    .faq-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+    .faq-left h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+    .faq-left p { color: var(--text-muted); font-size: 0.9rem; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.35rem 0; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; min-height: 56px; }
+    .faq-q:hover { color: var(--brand); }
+    .faq-icon { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.3s, background 0.3s, border-color 0.3s; }
+    .faq-icon svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--brand); border-color: var(--brand); color: #000; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-item.open .faq-a { max-height: 500px; }
+    .faq-a p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.8; padding-bottom: 1.5rem; }
+
+    /* ============================================================
+       CONTACT CTA
+    ============================================================ */
+    #contact { border-top: 1px solid var(--border); background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,232,122,0.06), transparent); }
+    .contact-inner { text-align: center; max-width: 700px; margin: 0 auto; }
+    .contact-inner h2 { font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 1.4rem; }
+    .contact-inner > p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.25rem; }
+    .contact-email {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.875rem 1rem;
+      font-size: 0.95rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      display: block;
+      margin: 0 auto 0.65rem;
+      -webkit-appearance: none;
+      min-height: 48px;
+    }
+    .contact-email:focus { border-color: var(--brand); }
+    .contact-email::placeholder { color: var(--text-dim); }
+    .cta-microstats { display: flex; gap: 2.5rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; gap: 1.5rem 3rem; }
+    .cta-ms-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-ms-label { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.2rem; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; }
+    .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; }
+    .footer-logo span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; color: var(--text-dim); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-muted); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dim); }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       RESPONSIVE — TABLET  ≤ 960px
+    ============================================================ */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 62px; left: 0; right: 0;
+        background: rgba(8,11,15,0.97);
+        padding: 1.75rem 1.25rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .nav-links.open li { border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; }
+      .nav-links.open li:last-child { border-bottom: none; padding-bottom: 0; }
+      .nav-links.open a { font-size: 1.05rem; color: var(--text); }
+
+      section { padding: 80px 0; }
+
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .services-header { grid-template-columns: 1fr; gap: 1.25rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured, .svc-card.span2 { grid-row: span 1; grid-column: span 1; }
+
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .calc-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
+      .calc-tabs { width: 100%; }
+      .calc-tab { flex: 1; justify-content: center; }
+
+      .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .testimonials-scroll { grid-template-columns: 1fr 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+
+      .hero-stats { grid-template-columns: repeat(2, auto); gap: 1.5rem 3rem; }
+      .process-step { grid-template-columns: 48px 1fr; gap: 1.5rem; }
+      .step-num { font-size: 2.2rem; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-links { gap: 1.25rem; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE  ≤ 600px
+    ============================================================ */
+    @media (max-width: 600px) {
+      section { padding: 64px 0; }
+
+      .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .hero-badge { font-size: 0.72rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
+
+      .pain-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .pain-card { padding: 1.5rem; }
+
+      .testimonials-scroll { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+
+      .calc-tabs { gap: 0.3rem; padding: 4px; }
+      .calc-tab { padding: 0.6rem 0.85rem; font-size: 0.78rem; }
+
+      .process-step { grid-template-columns: 40px 1fr; gap: 1.25rem; }
+      .step-num { font-size: 1.8rem; }
+
+      .services-grid { gap: 1px; }
+      .svc-card { padding: 1.5rem; }
+
+      .faq-q { font-size: 0.875rem; }
+
+      .contact-inner h2 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+      .contact-inner > p { font-size: 0.95rem; }
+
+      .cta-microstats { gap: 1.25rem 2rem; }
+
+      .roi-result .result-num { font-size: 2rem; }
+      .roi-result-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — SMALL MOBILE  ≤ 380px
+    ============================================================ */
+    @media (max-width: 380px) {
+      .hero-title { font-size: 2.4rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .calc-tab { font-size: 0.72rem; padding: 0.55rem 0.7rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Game<span>Seven</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#roi">ROI</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Free Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="blob blob-brand" style="width:600px;height:600px;top:-150px;left:-220px;"></div>
+    <div class="blob blob-teal"  style="width:380px;height:380px;top:280px;right:-80px;"></div>
+    <div class="container">
+      <div class="hero-badge">Shopify SEO · AI Optimization · CRO — When you need the A-team</div>
+      <h1 class="display hero-title">
+        <span class="line">Rank higher.</span>
+        <span class="line gradient-text">Get found by AI.</span>
+        <span class="line">Sell more.</span>
+      </h1>
+      <p class="hero-sub">Game Seven Marketing is a niche team of expert consultants — not a generalist agency. We do one thing: grow Shopify e-commerce brands through SEO, AI Optimization, and CRO. Nothing else.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Book a Free Strategy Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#roi" class="btn-secondary">Calculate Your ROI</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years of SEO expertise</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">$50M+</div>
+          <div class="stat-label">Revenue generated for clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Shopify stores optimized</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Average client rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div id="logos">
+    <p class="logos-label">Driving organic growth for Shopify brands</p>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item">Shopify SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">AI Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">ChatGPT Visibility</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Technical SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Conversion Rate Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Answer Engine Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Shopify Build & Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">E-Commerce Growth</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Shopify SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">AI Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">ChatGPT Visibility</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Technical SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Conversion Rate Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Answer Engine Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Shopify Build & Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">E-Commerce Growth</span>
+        <span class="marquee-item">⬥</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="reveal">
+          <div class="section-label">Who we are</div>
+          <h2 class="heading">We're not an agency. We're the specialists you call when an agency has let you down.</h2>
+          <p>Most agencies spread themselves thin — social, ads, email, web design, whatever you need. That's their weakness. <em>We do three things: SEO, AI Optimization, and CRO for Shopify. That's it.</em> And we're obsessive about all three.</p>
+          <p>We've built and sold e-commerce brands ourselves. We've felt the pressure of a Google algorithm update at 2am. We've made every imaginable mistake on Shopify — broken things spectacularly, fixed them, then broken them again in a different way. Those scars are what make us genuinely good at this.</p>
+          <p>We're not here to manage your account. We're here to <em>grow your business</em> — with the same urgency we'd bring if it were our own.</p>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="founder-block">
+            <div class="founder-avatar">JP</div>
+            <div class="founder-info">
+              <div class="founder-name-row">
+                <div class="founder-name">Jesper Pallesen</div>
+                <a href="https://www.linkedin.com/in/jesperpallesen20/" target="_blank" rel="noopener noreferrer" class="founder-linkedin" aria-label="Jesper on LinkedIn">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="founder-role">Founder · Technical SEO & AI Optimization</div>
+            </div>
+          </div>
+          <p class="founder-bio">With over 10 years specializing in technical SEO and AI Optimization for e-commerce, Jesper has seen search evolve through every major shift — from Panda to today's AI-first landscape. He's built and sold e-commerce brands, so he understands what's actually at stake. Shopify is his platform of choice, and he knows every corner of it.</p>
+          <div class="about-divider"></div>
+          <div class="about-tags">
+            <span class="about-tag">10+ Years SEO</span>
+            <span class="about-tag">Technical SEO</span>
+            <span class="about-tag">AI Optimization</span>
+            <span class="about-tag">Shopify Expert</span>
+            <span class="about-tag">Built & Sold E-Commerce Brands</span>
+          </div>
+          <div class="about-divider"></div>
+          <div class="slogan-block">
+            <div class="slogan-text">"When you need the A-team."</div>
+            <div class="slogan-sub">Game Seven Marketing — niche experts, not generalists</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS — 6 cards, spaced, custom SVG icons ===== -->
+  <section id="pain">
+    <div class="container">
+      <div class="pain-header reveal">
+        <div class="section-label">Sound familiar?</div>
+        <h2 class="heading">Your Shopify store is leaving money on the table every single day.</h2>
+      </div>
+      <div class="pain-grid reveal">
+
+        <!-- 1: buried on Google -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6" opacity="0.5"/></svg>
+          </div>
+          <h3>Buried on Google</h3>
+          <p>Your competitors own page one for every product category that matters. You're 100% dependent on paid ads because organic search isn't working — and that's a costly way to run a business.</p>
+        </div>
+
+        <!-- 2: invisible to AI -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5-4 6.5V18a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-2.5C6.5 14 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/><path d="M10 17v-2.5M14 17v-2.5" opacity="0.5"/></svg>
+          </div>
+          <h3>Invisible to AI search</h3>
+          <p>When someone asks ChatGPT or Perplexity for product recommendations in your category, your brand doesn't come up. AI search is how the next generation shops — and you're not there yet.</p>
+        </div>
+
+        <!-- 3: traffic doesn't convert -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v4H3z"/><path d="M7 7v14M17 7v14"/><path d="M3 21h18"/><path d="M12 11v6" opacity="0.5"/><path d="M9 14l3-3 3 3" opacity="0.5"/></svg>
+          </div>
+          <h3>Traffic that doesn't convert</h3>
+          <p>You're paying for clicks that leave. Your conversion rate is below 2% and you're not sure what's killing it — the product page, the checkout, the trust signals, or all of the above.</p>
+        </div>
+
+        <!-- 4: ad spend with no return -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M9 3.5A9 9 0 0 0 3 12" opacity="0.5"/></svg>
+          </div>
+          <h3>Ad spend that never pays back</h3>
+          <p>You pour budget into paid channels every month. CAC keeps rising, margins keep shrinking. There's no long-term asset being built — the moment you stop spending, the traffic disappears.</p>
+        </div>
+
+        <!-- 5: growth plateau -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><polyline points="3 17 8 12 13 14 21 6"/><path d="M3 21h18" opacity="0.5"/><path d="M18 6h3v3" opacity="0.5"/></svg>
+          </div>
+          <h3>Growth that's hit a ceiling</h3>
+          <p>Sales have stalled. More products, more ads — nothing's moving the needle. You know there's revenue being left on the table but you can't pinpoint exactly where or how to unlock it.</p>
+        </div>
+
+        <!-- 6: agencies that underdeliver -->
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9l6 6M15 9l-6 6" opacity="0.6"/></svg>
+          </div>
+          <h3>Agencies that underdeliver</h3>
+          <p>You've hired agencies before. They reported on traffic and impressions, delivered beautiful slide decks, and produced little real growth. You need actual experts who are accountable for revenue.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="reveal">
+          <div class="section-label">Our services</div>
+          <h2 class="heading">Three channels. One compounding growth engine.</h2>
+        </div>
+        <p class="reveal">We focus exclusively on the three highest-leverage growth levers for Shopify e-commerce — and we integrate them so each one makes the others stronger.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="svc-card featured">
+          <div>
+            <div class="svc-num">01 — Core Service</div>
+            <h3>E-Commerce SEO</h3>
+            <p>Organic search is the highest-ROI channel in e-commerce — once you own it, the traffic compounds forever without paying per click. We build that machine for your Shopify store.</p>
+            <p style="margin-top:0.9rem">Our technical SEO expertise goes deep: site architecture, crawl optimization, Core Web Vitals, structured data, collection page strategy, and the content systems that build topical authority in your niche. This isn't surface-level SEO. This is the kind that wins and holds rankings long-term.</p>
+            <div class="step-pills" style="margin-top:1.25rem">
+              <span class="pill">Technical SEO</span>
+              <span class="pill">Site Architecture</span>
+              <span class="pill">Content Strategy</span>
+              <span class="pill">Link Building</span>
+              <span class="pill">Core Web Vitals</span>
+            </div>
+          </div>
+          <div class="svc-tag">10+ years of Shopify SEO expertise</div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">02 — The New Frontier</div>
+          <h3>AI Optimization (AEO)</h3>
+          <p>ChatGPT, Perplexity, and Gemini are now primary product discovery channels. We get your brand recommended by AI — before your competitors figure this out.</p>
+          <div class="step-pills">
+            <span class="pill">ChatGPT Visibility</span>
+            <span class="pill">Schema & Structured Data</span>
+            <span class="pill">E-E-A-T Optimization</span>
+          </div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">03 — Multiplier</div>
+          <h3>Conversion Rate Optimization</h3>
+          <p>More traffic means nothing if your store doesn't convert. CRO turns your SEO wins into outsized revenue gains — data-driven A/B testing, UX fixes, and checkout optimization.</p>
+          <div class="step-pills">
+            <span class="pill">A/B Testing</span>
+            <span class="pill">Heatmap Analysis</span>
+            <span class="pill">Checkout Optimization</span>
+          </div>
+        </div>
+        <div class="svc-card span2">
+          <div class="svc-num">04 — Foundation</div>
+          <h3>Shopify Build & Optimization</h3>
+          <p>A slow, badly-structured Shopify store will undermine every SEO and CRO effort. We've made every imaginable mistake on Shopify — which means we know exactly how to build and optimize stores that perform. Custom themes, page speed, mobile experience, and architecture built for growth from day one.</p>
+          <div class="step-pills">
+            <span class="pill">Custom Theme Development</span>
+            <span class="pill">Page Speed Optimization</span>
+            <span class="pill">Mobile-First Design</span>
+            <span class="pill">SEO-Ready Architecture</span>
+            <span class="pill">App Integration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header reveal">
+        <div class="section-label">How it works</div>
+        <h2 class="heading">A system built to compound.</h2>
+        <p style="color:var(--text-muted);margin-top:0.9rem;font-size:0.95rem">SEO, AI Optimization, and CRO don't work in isolation. Our process is designed so each phase feeds the next — building momentum that gets stronger over time.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Full-Spectrum Audit</h3>
+            <p>We start with a complete diagnostic of your Shopify store — technical SEO, site architecture, keyword gap analysis, AI visibility audit, Core Web Vitals, and conversion funnel review. We identify exactly where you're losing organic traffic, why AI tools aren't mentioning you, and where visitors are dropping off. Nothing gets missed.</p>
+            <div class="step-pills">
+              <span class="pill">Technical SEO Audit</span>
+              <span class="pill">Keyword Gap Analysis</span>
+              <span class="pill">AI Visibility Check</span>
+              <span class="pill">CRO Heuristic Review</span>
+              <span class="pill">Competitor Research</span>
+            </div>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Prioritized Growth Roadmap</h3>
+            <p>You get a clear, ranked plan — every opportunity sorted by revenue impact vs. effort. Technical fixes that are actively blocking rankings go first. Quick-win content targets follow. A/B tests are queued based on highest conversion potential. You always know exactly what we're working on and why, with transparent reporting tied to real business metrics.</p>
+            <div class="step-pills">
+              <span class="pill">90-Day Roadmap</span>
+              <span class="pill">Content Calendar</span>
+              <span class="pill">Test Hypotheses</span>
+              <span class="pill">Technical Fix Queue</span>
+            </div>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Execute & Compound</h3>
+            <p>We build, publish, test, and measure. SEO content compounds monthly — each piece builds topical authority and attracts more organic traffic. AI Optimization work positions your brand in AI model responses. CRO testing turns every traffic gain into amplified revenue. The three channels reinforce each other, creating growth that accelerates over time.</p>
+            <div class="step-pills">
+              <span class="pill">Content Publishing</span>
+              <span class="pill">A/B Testing</span>
+              <span class="pill">Link Acquisition</span>
+              <span class="pill">Monthly Strategy Calls</span>
+              <span class="pill">Live Reporting Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON ===== -->
+  <section id="compare">
+    <div class="container">
+      <div class="compare-header reveal">
+        <div class="section-label">Why us</div>
+        <h2 class="heading">Them vs. us.</h2>
+        <p>Generalist agencies don't have the depth to do what we do. Here's what makes the difference.</p>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-col">
+          <div class="compare-col-title">Generic Marketing Agencies</div>
+          <ul class="compare-list">
+            <li><span class="ci no">✕</span>Try to do everything — social, ads, email, SEO, design</li>
+            <li><span class="ci no">✕</span>No real Shopify specialization or deep platform knowledge</li>
+            <li><span class="ci no">✕</span>SEO is an afterthought, not a core competency</li>
+            <li><span class="ci no">✕</span>Zero understanding of AI search — haven't caught up yet</li>
+            <li><span class="ci no">✕</span>Report on traffic and impressions, not revenue</li>
+            <li><span class="ci no">✕</span>Junior staff on your account, senior staff on the pitch</li>
+            <li><span class="ci no">✕</span>No skin in the game — paid monthly regardless of results</li>
+          </ul>
+        </div>
+        <div class="compare-col us">
+          <div class="compare-col-title">Game Seven Marketing</div>
+          <ul class="compare-list">
+            <li><span class="ci yes">✓</span>Exclusively SEO, AEO and CRO — nothing else, ever</li>
+            <li><span class="ci yes">✓</span>Shopify is our full-time obsession — we've built and sold brands on it</li>
+            <li><span class="ci yes">✓</span>10+ years of technical SEO expertise, led by our founder</li>
+            <li><span class="ci yes">✓</span>Built for AI-first search — early movers in AEO for e-commerce</li>
+            <li><span class="ci yes">✓</span>Every metric tied to revenue — that's the only number that matters</li>
+            <li><span class="ci yes">✓</span>Senior consultants on every account — no handoffs, no juniors</li>
+            <li><span class="ci yes">✓</span>Guaranteed results or we keep working until we deliver</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROI CALCULATORS ===== -->
+  <section id="roi">
+    <div class="container">
+      <div class="roi-header reveal">
+        <div class="section-label">Calculate your upside</div>
+        <h2 class="heading">See what the numbers look like for your store.</h2>
+        <p>Use the calculators below to estimate the revenue impact of SEO, AI Optimization, and CRO for your specific situation. Conservative estimates based on real client results.</p>
+      </div>
+
+      <div class="calc-tabs reveal">
+        <!-- Custom SVG icons replace emojis -->
+        <button class="calc-tab active" onclick="switchCalc('seo', this)">
+          <svg viewBox="0 0 24 24"><polyline points="3 17 8 12 13 15 21 5"/><path d="M19 5h2v2"/></svg>
+          SEO Revenue
+        </button>
+        <button class="calc-tab" onclick="switchCalc('aeo', this)">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M6 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M18 9l2 2-2 2" opacity="0.6"/></svg>
+          AI Optimization
+        </button>
+        <button class="calc-tab" onclick="switchCalc('cro', this)">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          CRO Uplift
+        </button>
+      </div>
+
+      <!-- SEO Calculator -->
+      <div id="calc-seo" class="calc-panel active reveal">
+        <div class="calc-intro">
+          <h3>What is organic search worth to your store?</h3>
+          <p>Most e-commerce brands pay $1.50–$4.00 per click in paid ads. SEO delivers the same clicks — permanently — at a fraction of the cost. Enter your current situation and see the impact of ranking for your target keywords.</p>
+          <p class="calc-disclaimer">Estimates assume a 6–12 month ramp to target traffic levels, which is typical for our clients.</p>
+        </div>
+        <div class="calc-box">
+          <div class="roi-field">
+            <label>Current monthly organic sessions</label>
+            <input type="number" id="seo-current" value="2000" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Target monthly organic sessions (after SEO)</label>
+            <input type="number" id="seo-target" value="8000" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Store conversion rate (%)</label>
+            <input type="number" id="seo-cvr" value="2.2" step="0.1" inputmode="decimal" />
+          </div>
+          <div class="roi-field">
+            <label>Average order value ($)</label>
+            <input type="number" id="seo-aov" value="85" inputmode="numeric" />
+          </div>
+          <div class="roi-result">
+            <div class="result-label">Additional annual revenue from SEO</div>
+            <div class="result-num" id="seoResult">—</div>
+            <div class="result-sub" id="seoSub"></div>
+          </div>
+          <div class="roi-result-row">
+            <div class="roi-mini-stat">
+              <div class="mval" id="seoOrders">—</div>
+              <div class="mlabel">Extra orders/month</div>
+            </div>
+            <div class="roi-mini-stat">
+              <div class="mval" id="seoCPC">—</div>
+              <div class="mlabel">Equivalent ad spend saved/yr</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Unlock this organic traffic →</a>
+        </div>
+      </div>
+
+      <!-- AEO Calculator -->
+      <div id="calc-aeo" class="calc-panel reveal">
+        <div class="calc-intro">
+          <h3>How much revenue is AI search leaving on the table?</h3>
+          <p>AI tools like ChatGPT and Perplexity handle millions of product discovery queries every day. Brands that appear in AI responses get warm, high-intent referral traffic — buyers who are already sold on the category and looking for a recommendation.</p>
+          <p class="calc-disclaimer">AI search traffic is growing rapidly. Early movers in AEO will compound this advantage for years.</p>
+        </div>
+        <div class="calc-box">
+          <div class="roi-field">
+            <label>Monthly AI search queries in your category (estimate)</label>
+            <input type="number" id="aeo-queries" value="50000" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Current AI visibility — % of queries that mention you</label>
+            <input type="range" id="aeo-current-vis" min="0" max="20" value="0" step="1" oninput="calcAEO()" />
+            <div class="range-labels"><span>0%</span><span id="aeo-vis-label" style="color:var(--brand);font-weight:600">0%</span><span>20%</span></div>
+          </div>
+          <div class="roi-field">
+            <label>Target AI visibility after optimization</label>
+            <div class="roi-select-group">
+              <button onclick="setAEOTarget(0.03, this)">3%</button>
+              <button onclick="setAEOTarget(0.06, this)" class="active">6%</button>
+              <button onclick="setAEOTarget(0.10, this)">10%</button>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label>Average order value ($)</label>
+            <input type="number" id="aeo-aov" value="85" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Store conversion rate (%)</label>
+            <input type="number" id="aeo-cvr" value="2.5" step="0.1" inputmode="decimal" />
+          </div>
+          <div class="roi-result">
+            <div class="result-label">Additional annual revenue from AI visibility</div>
+            <div class="result-num" id="aeoResult">—</div>
+            <div class="result-sub" id="aeoSub"></div>
+          </div>
+          <div class="roi-result-row">
+            <div class="roi-mini-stat">
+              <div class="mval" id="aeoSessions">—</div>
+              <div class="mlabel">New sessions/month from AI</div>
+            </div>
+            <div class="roi-mini-stat">
+              <div class="mval" id="aeoOrders">—</div>
+              <div class="mlabel">Extra orders/month</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Get your brand into AI results →</a>
+        </div>
+      </div>
+
+      <!-- CRO Calculator -->
+      <div id="calc-cro" class="calc-panel reveal">
+        <div class="calc-intro">
+          <h3>What would a higher conversion rate mean in dollars?</h3>
+          <p>Most Shopify stores convert between 1–2%. The top performers hit 4–6%. CRO closes that gap — turning existing traffic into more revenue without spending a cent more on ads.</p>
+          <p>When you combine CRO wins with SEO growth, the multiplier effect is where the real magic happens.</p>
+          <p class="calc-disclaimer">Most clients see a 10–25% uplift in conversion rate within the first 90 days.</p>
+        </div>
+        <div class="calc-box">
+          <div class="roi-field">
+            <label>Average order value ($)</label>
+            <input type="number" id="cro-aov" value="85" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Monthly orders</label>
+            <input type="number" id="cro-orders" value="500" inputmode="numeric" />
+          </div>
+          <div class="roi-field">
+            <label>Expected conversion rate uplift</label>
+            <div class="roi-select-group">
+              <button onclick="setCROUplift(0.10, this)">10%</button>
+              <button onclick="setCROUplift(0.15, this)" class="active">15%</button>
+              <button onclick="setCROUplift(0.25, this)">25%</button>
+            </div>
+          </div>
+          <div class="roi-result">
+            <div class="result-label">Additional annual revenue from CRO</div>
+            <div class="result-num" id="croResult">—</div>
+            <div class="result-sub" id="croSub"></div>
+          </div>
+          <div class="roi-result-row">
+            <div class="roi-mini-stat">
+              <div class="mval" id="croExtraOrders">—</div>
+              <div class="mlabel">Extra orders/month</div>
+            </div>
+            <div class="roi-mini-stat">
+              <div class="mval" id="croMonthly">—</div>
+              <div class="mlabel">Extra revenue/month</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Unlock this revenue →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <div class="section-label">Client results</div>
+        <h2 class="heading">What our clients say.</h2>
+      </div>
+      <div class="testimonials-scroll reveal">
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"Organic traffic was basically zero when we started — we were paying for every single visitor. After 6 months with Game Seven, organic is now 38% of our total revenue. That's a permanent reduction in our CAC that compounds every month."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JR</div>
+            <div><div class="testi-name">Jason Rivera</div><div class="testi-role">CEO, Apex Apparel Co.</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"Jesper's technical SEO audit uncovered 14 critical issues we didn't know existed. Within 8 weeks of fixing them, we jumped from page 3 to page 1 for our top 6 product keywords. The difference in organic revenue was immediate."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SK</div>
+            <div><div class="testi-name">Sara Kim</div><div class="testi-role">Founder, Botanica Skincare</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"The AI Optimization work was unlike anything we'd seen. We now appear in ChatGPT and Perplexity recommendations for our category. It's a completely new acquisition channel that our competitors haven't touched yet."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MP</div>
+            <div><div class="testi-name">Marcus Patel</div><div class="testi-role">E-Commerce Director, NovaTech Gear</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"What I appreciate most is that Game Seven actually knows Shopify inside and out. Our store speed went from 38 to 91 on mobile and our SEO rankings moved almost immediately after the technical fixes."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AL</div>
+            <div><div class="testi-name">Alicia Lu</div><div class="testi-role">Owner, Luna Home Goods</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"These guys are obsessed with the right thing — actual revenue, not vanity metrics. A CRO win in week 3 recovered $28K/month in abandoned cart revenue. 18 months in and it keeps compounding."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">TD</div>
+            <div><div class="testi-name">Tyler Dunne</div><div class="testi-role">CMO, The Summit Co.</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"We came to Game Seven after two other SEO agencies failed us. The difference is night and day. Jesper knows technical SEO at a depth I haven't seen anywhere else. Wish we'd found them years earlier."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">NW</div>
+            <div><div class="testi-name">Nina Walsh</div><div class="testi-role">VP Commerce, Elevate Nutrition</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="reveal">
+          <div class="section-label">Got questions?</div>
+          <h2 class="heading">Frequently asked.</h2>
+          <p style="color:var(--text-muted);margin-top:1rem">Everything you need to know before we talk.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              How long does SEO take to show results?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Technical SEO fixes can show ranking improvements within weeks. Content and authority-building typically compounds over 3–6 months, after which it accelerates significantly. Most clients see meaningful organic traffic increases within 90 days and substantial revenue impact by month 4–6. Unlike paid ads, the results don't stop when you stop paying — they keep growing.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              What exactly is AI Optimization (AEO)?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Answer Engine Optimization (AEO) means structuring your content, brand authority, and data so that AI tools like ChatGPT, Perplexity, and Google's AI Overviews recommend your products when users ask questions in your category. It's the fastest-growing new acquisition channel in e-commerce, and the brands that establish AI visibility now will compound that advantage for years.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Do you work with brands at any stage?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>For CRO specifically, we recommend at least 10,000 monthly sessions to run statistically valid A/B tests. For SEO and AEO, we work with brands at any stage — building the right technical foundation early is far easier than fixing a broken structure later. Book a call and we'll tell you exactly what's right for where you are now.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              What's your performance guarantee?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Within 6 months, we guarantee a measurable improvement in your revenue per visitor from organic channels. If we haven't hit that goal, we keep working at no additional charge until we do. We put our own time on the line because we're confident enough in our process to back it up.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              You've built and sold e-commerce brands — how does that help me?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>It means we understand the pressure you're under. We know what a Google algorithm update feels like when it's your own revenue on the line. We've made expensive Shopify mistakes — so we won't make them on your store. We think about your business like owners, not service providers. That's a different kind of engagement.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Do you work on platforms other than Shopify?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Shopify and Shopify Plus are our primary platforms and where we do our deepest, most effective work. We can provide SEO and CRO consulting for WooCommerce and BigCommerce stores, but if you're on Shopify, you'll get the full benefit of our platform-specific expertise — which goes considerably deeper than what any generalist agency can offer.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CTA ===== -->
+  <section id="contact">
+    <div class="blob blob-brand" style="width:550px;height:550px;bottom:-180px;left:50%;transform:translateX(-50%);opacity:0.09;"></div>
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label">Book a free call</div>
+        <h2 class="display">Ready to call in the A-team?</h2>
+        <p>Book a free 30-minute strategy session. We'll audit your store's SEO and AI visibility, identify the highest-impact opportunities, and give you a clear picture of what's possible — with no pitch and no pressure.</p>
+        <input type="text" class="contact-email" placeholder="Your name" autocomplete="name" />
+        <input type="email" class="contact-email" placeholder="Your email address" autocomplete="email" inputmode="email" />
+        <div style="text-align:center;margin-top:1rem">
+          <a href="mailto:hello@gamesevenmarketing.com" class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;display:inline-flex">
+            Schedule My Free Strategy Call →
+          </a>
+        </div>
+        <p style="font-size:0.78rem;color:var(--text-dim);margin-top:1.4rem">You run a Shopify store. You're serious about growing it. That's all we need.</p>
+        <div class="cta-microstats">
+          <div><div class="cta-ms-num">Free</div><div class="cta-ms-label">30-min strategy call</div></div>
+          <div><div class="cta-ms-num">6-Month</div><div class="cta-ms-label">Revenue guarantee</div></div>
+          <div><div class="cta-ms-num">10+ Years</div><div class="cta-ms-label">SEO expertise</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Game<span>Seven</span> Marketing</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#roi">ROI Calculators</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-copy">© 2025 Game Seven Marketing. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ---- Navbar scroll ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ---- Mobile hamburger ----
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }));
+
+    // ---- Scroll reveal ----
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // ---- FAQ ----
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ---- Smooth scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navH = document.getElementById('navbar').offsetHeight;
+          const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ---- Calculator tabs ----
+    function switchCalc(id, btn) {
+      document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('calc-' + id).classList.add('active');
+    }
+
+    // ---- SEO Calculator ----
+    function calcSEO() {
+      const current  = parseFloat(document.getElementById('seo-current').value) || 0;
+      const target   = parseFloat(document.getElementById('seo-target').value)  || 0;
+      const cvr      = parseFloat(document.getElementById('seo-cvr').value)     / 100 || 0;
+      const aov      = parseFloat(document.getElementById('seo-aov').value)     || 0;
+      const extraSessions = Math.max(0, target - current);
+      const extraOrdersMo = extraSessions * cvr;
+      const extraRevYr    = extraOrdersMo * aov * 12;
+      const savedAdSpend  = extraSessions * 12 * 2.5;
+      document.getElementById('seoResult').textContent  = '$' + Math.round(extraRevYr).toLocaleString();
+      document.getElementById('seoSub').textContent     = '+' + Math.round(extraSessions).toLocaleString() + ' extra sessions/month at ' + (cvr*100).toFixed(1) + '% CR';
+      document.getElementById('seoOrders').textContent  = '+' + Math.round(extraOrdersMo).toLocaleString();
+      document.getElementById('seoCPC').textContent     = '$' + Math.round(savedAdSpend).toLocaleString();
+    }
+    ['seo-current','seo-target','seo-cvr','seo-aov'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcSEO);
+    });
+    calcSEO();
+
+    // ---- AEO Calculator ----
+    let aeoTarget = 0.06;
+    function setAEOTarget(val, btn) {
+      aeoTarget = val;
+      document.querySelectorAll('#calc-aeo .roi-select-group button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      calcAEO();
+    }
+    function calcAEO() {
+      const queries    = parseFloat(document.getElementById('aeo-queries').value)      || 0;
+      const currentVis = parseFloat(document.getElementById('aeo-current-vis').value)  / 100 || 0;
+      const aov        = parseFloat(document.getElementById('aeo-aov').value)           || 0;
+      const cvr        = parseFloat(document.getElementById('aeo-cvr').value)           / 100 || 0;
+      const ctr        = 0.08;
+      const newSessionsMo = Math.max(0, (aeoTarget - currentVis)) * queries * ctr;
+      const newOrdersMo   = newSessionsMo * cvr;
+      const extraRevYr    = newOrdersMo * aov * 12;
+      document.getElementById('aeo-vis-label').textContent = Math.round(currentVis * 100) + '%';
+      document.getElementById('aeoResult').textContent     = '$' + Math.round(extraRevYr).toLocaleString();
+      document.getElementById('aeoSub').textContent        = 'From ' + Math.round(currentVis*100) + '% → ' + Math.round(aeoTarget*100) + '% AI visibility';
+      document.getElementById('aeoSessions').textContent   = '+' + Math.round(newSessionsMo).toLocaleString();
+      document.getElementById('aeoOrders').textContent     = '+' + Math.round(newOrdersMo).toLocaleString();
+    }
+    ['aeo-queries','aeo-aov','aeo-cvr'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcAEO);
+    });
+    calcAEO();
+
+    // ---- CRO Calculator ----
+    let croUplift = 0.15;
+    function setCROUplift(val, btn) {
+      croUplift = val;
+      document.querySelectorAll('#calc-cro .roi-select-group button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      calcCRO();
+    }
+    function calcCRO() {
+      const aov    = parseFloat(document.getElementById('cro-aov').value)    || 0;
+      const orders = parseFloat(document.getElementById('cro-orders').value) || 0;
+      const extraOrdersMo = orders * croUplift;
+      const extraRevMo    = extraOrdersMo * aov;
+      const extraRevYr    = extraRevMo * 12;
+      document.getElementById('croResult').textContent      = '$' + Math.round(extraRevYr).toLocaleString();
+      document.getElementById('croSub').textContent         = Math.round(croUplift*100) + '% more orders from same traffic';
+      document.getElementById('croExtraOrders').textContent = '+' + Math.round(extraOrdersMo).toLocaleString();
+      document.getElementById('croMonthly').textContent     = '+$' + Math.round(extraRevMo).toLocaleString();
+    }
+    ['cro-aov','cro-orders'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcCRO);
+    });
+    calcCRO();
+  </script>
+</body>
+</html>
