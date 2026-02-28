@@ -559,7 +559,12 @@
     .roi-header { margin-bottom: 3.5rem; }
     .roi-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
     .roi-header p { color: var(--text-muted); max-width: 560px; font-size: 0.95rem; }
-
+    .calc-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
     .calc-tabs {
       display: flex;
       gap: 0.4rem;
@@ -570,6 +575,8 @@
       padding: 5px;
       width: fit-content;
       flex-wrap: wrap;
+      grid-column: 1;
+      grid-row: 1;
     }
     .calc-tab {
       display: flex;
@@ -593,13 +600,16 @@
     .calc-tab.active svg { stroke: #000; }
 
     .calc-panel { display: none; }
-    .calc-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-
+    .calc-panel.active { display: contents; }
+    .calc-intro {
+  grid-column: 1;
+  grid-row: 2;
+}
     .calc-intro h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
     .calc-intro p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.9rem; }
     .calc-disclaimer { font-size: 0.78rem; color: var(--text-dim); }
 
-    .calc-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; }
+    .calc-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; grid-column: 2; grid-row: 1 / 3; }
 
     .roi-field { margin-bottom: 1.4rem; }
     .roi-field label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.55rem; }
@@ -778,8 +788,9 @@
 
       .pain-grid { grid-template-columns: repeat(2, 1fr); }
 
-      .calc-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
-      .calc-tabs { width: 100%; }
+      .calc-wrapper { display: block; }
+      .calc-tabs { margin-bottom: 1.5rem; }
+      .calc-panel.active { display: flex; flex-direction: column; gap: 2.5rem; }
       .calc-tab { flex: 1; justify-content: center; }
 
       .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1220,9 +1231,8 @@
         <h2 class="heading">See what the numbers look like for your store.</h2>
         <p>Use the calculators below to estimate the revenue impact of SEO, AI Optimization, and CRO for your specific situation. Conservative estimates based on real client results.</p>
       </div>
-
-      <div class="calc-tabs reveal">
-        <!-- Custom SVG icons replace emojis -->
+      <div class="calc-wrapper reveal">
+      <div class="calc-tabs">
         <button class="calc-tab active" onclick="switchCalc('seo', this)">
           <svg viewBox="0 0 24 24"><polyline points="3 17 8 12 13 15 21 5"/><path d="M19 5h2v2"/></svg>
           SEO Revenue
@@ -1238,7 +1248,7 @@
       </div>
 
       <!-- SEO Calculator -->
-      <div id="calc-seo" class="calc-panel active reveal">
+      <div id="calc-seo" class="calc-panel active">
         <div class="calc-intro">
           <h3>What is organic search worth to your store?</h3>
           <p>Most e-commerce brands pay $1.50–$4.00 per click in paid ads. SEO delivers the same clicks — permanently — at a fraction of the cost. Enter your current situation and see the impact of ranking for your target keywords.</p>
@@ -1281,7 +1291,7 @@
       </div>
 
       <!-- AEO Calculator -->
-      <div id="calc-aeo" class="calc-panel reveal">
+      <div id="calc-aeo" class="calc-panel">
         <div class="calc-intro">
           <h3>How much revenue is AI search leaving on the table?</h3>
           <p>AI tools like ChatGPT and Perplexity handle millions of product discovery queries every day. Brands that appear in AI responses get warm, high-intent referral traffic — buyers who are already sold on the category and looking for a recommendation.</p>
@@ -1333,7 +1343,7 @@
       </div>
 
       <!-- CRO Calculator -->
-      <div id="calc-cro" class="calc-panel reveal">
+      <div id="calc-cro" class="calc-panel">
         <div class="calc-intro">
           <h3>What would a higher conversion rate mean in dollars?</h3>
           <p>Most Shopify stores convert between 1–2%. The top performers hit 4–6%. CRO closes that gap — turning existing traffic into more revenue without spending a cent more on ads.</p>
@@ -1374,6 +1384,7 @@
           </div>
           <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Unlock this revenue →</a>
         </div>
+      </div>
       </div>
     </div>
   </section>
