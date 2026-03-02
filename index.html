@@ -87,7 +87,6 @@
       --text-muted: #7a8394;
       --text-dim:   #4a5260;
       --accent1: var(--brand);
-      --grad:      linear-gradient(135deg, var(--brand) 0%, #a8ffdb 100%);
       --grad-text: linear-gradient(135deg, var(--brand) 0%, #a8ffdb 100%);
       --red:   #ff4d4d;
     }
@@ -191,7 +190,7 @@
       padding: 0 1.25rem;
     }
     .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; }
-    .nav-logo span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-logo span { background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
     .nav-links a { font-size: 0.85rem; color: var(--text-muted); transition: color 0.2s; font-weight: 400; }
     .nav-links a:hover { color: var(--text); }
@@ -537,7 +536,7 @@
     .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; max-width: 880px; margin: 0 auto; }
     .compare-col { padding: 2.25rem; background: var(--bg-card); }
     .compare-col.us { background: var(--bg-card2); position: relative; }
-    .compare-col.us::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
+    .compare-col.us::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--brand); }
     .compare-col-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 1.75rem; color: var(--text-muted); }
     .compare-col.us .compare-col-title { color: var(--text); }
     .compare-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
@@ -684,7 +683,7 @@
     .testi-stars svg { width: 14px; height: 14px; fill: var(--brand); }
     .testi-quote { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
     .testi-author { display: flex; align-items: center; gap: 0.85rem; }
-    .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.85rem; color: #000; flex-shrink: 0; }
+    .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.85rem; color: #000; flex-shrink: 0; }
     .testi-name { font-family: 'Syne', sans-serif; font-size: 0.875rem; font-weight: 700; }
     .testi-role { font-size: 0.75rem; color: var(--text-muted); }
 
@@ -741,7 +740,7 @@
     footer { border-top: 1px solid var(--border); padding: 2.5rem 0; }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; }
     .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; }
-    .footer-logo span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-logo span { background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .footer-links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: wrap; }
     .footer-links a { font-size: 0.82rem; color: var(--text-muted); transition: color 0.2s; }
     .footer-links a:hover { color: var(--text-muted); }
@@ -881,17 +880,19 @@
           <div class="stat-label">Years of SEO expertise</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">$50M+</div>
+          <div class="stat-num">$45M+</div>
           <div class="stat-label">Revenue generated for clients</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">200+</div>
+          <div class="stat-num">60+</div>
           <div class="stat-label">Shopify stores optimized</div>
         </div>
+        <a href="#testimonials">
         <div class="stat-item">
           <div class="stat-num">4.9★</div>
           <div class="stat-label">Average client rating</div>
         </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1372,8 +1373,8 @@
           </div>
           <p class="testi-quote">"Organic traffic was basically zero when we started - we were paying for every single visitor. After 6 months with Game Seven, organic is now 38% of our total revenue. That's a permanent reduction in our CAC that compounds every month."</p>
           <div class="testi-author">
-            <div class="testi-avatar">JR</div>
-            <div><div class="testi-name">Jason Rivera</div><div class="testi-role">CEO, Apex Apparel Co.</div></div>
+            <div class="testi-avatar">J</div>
+            <div><div class="testi-name">Jason</div><div class="testi-role">CEO</div></div>
           </div>
         </div>
         <div class="testi-card">
@@ -1386,8 +1387,8 @@
           </div>
           <p class="testi-quote">"Jesper's technical SEO audit uncovered 14 critical issues we didn't know existed. Within 8 weeks of fixing them, we jumped from page 3 to page 1 for our top 6 product keywords. The difference in organic revenue was immediate."</p>
           <div class="testi-author">
-            <div class="testi-avatar">SK</div>
-            <div><div class="testi-name">Sara Kim</div><div class="testi-role">Founder, Botanica Skincare</div></div>
+            <div class="testi-avatar">S</div>
+            <div><div class="testi-name">Sebastian</div><div class="testi-role">Founder</div></div>
           </div>
         </div>
         <div class="testi-card">
@@ -1400,8 +1401,8 @@
           </div>
           <p class="testi-quote">"The AI Optimization work was unlike anything we'd seen. We now appear in ChatGPT and Perplexity recommendations for our category. It's a completely new acquisition channel that our competitors haven't touched yet."</p>
           <div class="testi-author">
-            <div class="testi-avatar">MP</div>
-            <div><div class="testi-name">Marcus Patel</div><div class="testi-role">E-Commerce Director, NovaTech Gear</div></div>
+            <div class="testi-avatar">M</div>
+            <div><div class="testi-name">Marcus</div><div class="testi-role">E-Commerce Director</div></div>
           </div>
         </div>
         <div class="testi-card">
@@ -1414,8 +1415,8 @@
           </div>
           <p class="testi-quote">"What I appreciate most is that Game Seven actually knows Shopify inside and out. Our store speed went from 38 to 91 on mobile and our SEO rankings moved almost immediately after the technical fixes."</p>
           <div class="testi-author">
-            <div class="testi-avatar">AL</div>
-            <div><div class="testi-name">Alicia Lu</div><div class="testi-role">Owner, Luna Home Goods</div></div>
+            <div class="testi-avatar">J</div>
+            <div><div class="testi-name">Jens</div><div class="testi-role">Owner</div></div>
           </div>
         </div>
         <div class="testi-card">
@@ -1428,8 +1429,8 @@
           </div>
           <p class="testi-quote">"These guys are obsessed with the right thing - actual revenue, not vanity metrics. A CRO win in week 3 recovered $28K/month in abandoned cart revenue. 18 months in and it keeps compounding."</p>
           <div class="testi-author">
-            <div class="testi-avatar">TD</div>
-            <div><div class="testi-name">Tyler Dunne</div><div class="testi-role">CMO, The Summit Co.</div></div>
+            <div class="testi-avatar">T</div>
+            <div><div class="testi-name">Tyler</div><div class="testi-role">CMO</div></div>
           </div>
         </div>
         <div class="testi-card">
@@ -1442,8 +1443,8 @@
           </div>
           <p class="testi-quote">"We came to Game Seven after two other SEO agencies failed us. The difference is night and day. Jesper knows technical SEO at a depth I haven't seen anywhere else. Wish we'd found them years earlier."</p>
           <div class="testi-author">
-            <div class="testi-avatar">NW</div>
-            <div><div class="testi-name">Nina Walsh</div><div class="testi-role">VP Commerce, Elevate Nutrition</div></div>
+            <div class="testi-avatar">N</div>
+            <div><div class="testi-name">Ninna</div><div class="testi-role">VP Commerce</div></div>
           </div>
         </div>
       </div>
@@ -1545,7 +1546,7 @@
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="footer-copy">© 2025 Game Seven Marketing. All rights reserved.</div>
+        <div class="footer-copy">© 2026 Game Seven Marketing. All rights reserved.</div>
       </div>
     </div>
   </footer>
