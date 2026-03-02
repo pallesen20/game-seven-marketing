@@ -365,9 +365,12 @@
       mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
     }
-    .marquee-track { display: flex; gap: 2.5rem; animation: marquee 22s linear infinite; white-space: nowrap; }
-    .marquee-item { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { display: flex; animation: marquee 22s linear infinite; white-space: nowrap; }
+    .marquee-item { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; margin-right: 2rem; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(var(--marquee-distance)); }
+    }
     #about {
       border-top: 1px solid var(--border);
       background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.04), transparent);
@@ -898,22 +901,6 @@
     <p class="logos-label">Driving organic growth for Shopify brands</p>
     <div class="marquee-wrap">
       <div class="marquee-track">
-        <span class="marquee-item">Shopify SEO</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">AI Optimization</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">ChatGPT Visibility</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">Technical SEO</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">Conversion Rate Optimization</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">Answer Engine Optimization</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">Shopify Build & Optimization</span>
-        <span class="marquee-item">⬥</span>
-        <span class="marquee-item">E-Commerce Growth</span>
-        <span class="marquee-item">⬥</span>
         <span class="marquee-item">Shopify SEO</span>
         <span class="marquee-item">⬥</span>
         <span class="marquee-item">AI Optimization</span>
@@ -1690,6 +1677,11 @@
       document.getElementById(id).addEventListener('input', calcCRO);
     });
     calcCRO();
+    const track = document.querySelector('.marquee-track');
+    const original = track.innerHTML;
+    track.innerHTML = original + original;
+    const halfWidth = track.scrollWidth / 2;
+    track.style.setProperty('--marquee-distance', '-' + halfWidth + 'px');
   </script>
 </body>
 </html>
