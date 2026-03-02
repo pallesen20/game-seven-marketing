@@ -526,7 +526,7 @@
     #process { border-top: 1px solid var(--border); }
     .process-header { max-width: 600px; margin-bottom: 4.5rem; }
     .process-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
-    .process-step { display: grid; grid-template-columns: 60px 1fr; gap: 2.5rem; padding: 2.75rem 0; border-bottom: 1px solid var(--border); }
+    .process-step { display: grid; grid-template-columns: 6rem 1fr; gap: 2.5rem; padding: 2.75rem 0; border-bottom: 1px solid var(--border); }
     .process-step:last-child { border-bottom: none; }
     .step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--text-dim); line-height: 1; padding-top: 0.2rem; }
     .step-content h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.9rem; }
@@ -799,7 +799,7 @@
       .compare-grid { grid-template-columns: 1fr; }
 
       .hero-stats { grid-template-columns: repeat(2, auto); gap: 1.5rem 3rem; }
-      .process-step { grid-template-columns: 48px 1fr; gap: 1.5rem; }
+      .process-step { grid-template-columns: 60px 1fr; gap: 1.5rem; }
       .step-num { font-size: 2.2rem; }
 
       .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -818,42 +818,27 @@
       .hero-actions .btn-primary,
       .hero-actions .btn-secondary { width: 100%; justify-content: center; }
       .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
-
       .pain-grid { grid-template-columns: 1fr; gap: 1rem; }
       .pain-card { padding: 1.5rem; }
-
       .testimonials-scroll { grid-template-columns: 1fr; }
       .compare-grid { grid-template-columns: 1fr; }
-
       .calc-tabs { gap: 0.3rem; padding: 4px; }
       .calc-tab { padding: 0.6rem 0.85rem; font-size: 0.78rem; }
-
-      .process-step { grid-template-columns: 40px 1fr; gap: 1.25rem; }
       .step-num { font-size: 1.8rem; }
-
       .services-grid { gap: 1px; }
       .svc-card { padding: 1.5rem; }
-
       .faq-q { font-size: 0.875rem; }
-
       .contact-inner h2 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
       .contact-inner > p { font-size: 0.95rem; }
-
       .cta-microstats { gap: 1.25rem 2rem; }
-
       .roi-result .result-num { font-size: 2rem; }
       .roi-result-row { grid-template-columns: 1fr 1fr; }
     }
-
-    /* ============================================================
-       RESPONSIVE — SMALL MOBILE  ≤ 380px
-    ============================================================ */
     @media (max-width: 380px) {
       .hero-title { font-size: 2.4rem; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
       .calc-tab { font-size: 0.72rem; padding: 0.55rem 0.7rem; }
     }
-
   </style>
 </head>
 <body>
