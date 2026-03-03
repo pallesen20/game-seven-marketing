@@ -194,7 +194,6 @@
   }
   </script>
   <style>
-
     /* ============================================================
        BRAND COLOR - CHANGE THIS ONE VALUE TO RETHEME EVERYTHING
        ↓ Only edit the hex below ↓
@@ -245,10 +244,6 @@
       z-index: 9999;
       opacity: 0.35;
     }
-
-    /* ============================================================
-       TYPOGRAPHY
-    ============================================================ */
     .display {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
@@ -271,10 +266,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
-    /* ============================================================
-       LAYOUT
-    ============================================================ */
     .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
     section { padding: 100px 0; position: relative; }
     .section-label {
@@ -285,17 +276,9 @@
       color: var(--accent1);
       margin-bottom: 1.25rem;
     }
-
-    /* ============================================================
-       BLOBS
-    ============================================================ */
     .blob { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; opacity: 0.13; }
     .blob-brand { background: var(--brand); }
     .blob-teal  { background: #00c9a7; }
-
-    /* ============================================================
-       NAVBAR
-    ============================================================ */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -350,10 +333,6 @@
       justify-content: center;
     }
     .hamburger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
-
-    /* ============================================================
-       HERO
-    ============================================================ */
     #hero {
       min-height: 100svh; /* svh = small viewport height - accounts for mobile browser chrome */
       display: flex;
@@ -475,10 +454,6 @@
       margin-bottom: 0.2rem;
     }
     .stat-label { font-size: 0.82rem; color: var(--text-muted); line-height: 1.35; }
-
-    /* ============================================================
-       MARQUEE
-    ============================================================ */
     #logos {
       padding: 48px 0;
       border-top: 1px solid var(--border);
@@ -1695,13 +1670,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
   <script>
-    // ---- Navbar scroll ----
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    // ---- Mobile hamburger ----
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
@@ -1713,14 +1686,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       hamburger.setAttribute('aria-expanded', 'false');
     }));
 
-    // ---- Scroll reveal ----
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
-    // ---- FAQ ----
     function toggleFaq(el) {
       const item = el.parentElement;
       const isOpen = item.classList.contains('open');
@@ -1728,7 +1699,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (!isOpen) item.classList.add('open');
     }
 
-    // ---- Smooth scroll ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -1749,7 +1719,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('calc-' + id).classList.add('active');
     }
 
-    // ---- SEO Calculator ----
     function calcSEO() {
       const current  = parseFloat(document.getElementById('seo-current').value) || 0;
       const target   = parseFloat(document.getElementById('seo-target').value)  || 0;
@@ -1769,7 +1738,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     calcSEO();
 
-    // ---- AEO Calculator ----
     let aeoTarget = 0.06;
     function setAEOTarget(val, btn) {
       aeoTarget = val;
@@ -1797,7 +1765,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     calcAEO();
 
-    // ---- CRO Calculator ----
     let croUplift = 0.15;
     function setCROUplift(val, btn) {
       croUplift = val;
