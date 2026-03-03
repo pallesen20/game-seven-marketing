@@ -1652,8 +1652,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== CONTACT CTA ===== -->
   <section id="contact">
     <div class="blob blob-brand" style="width:550px;height:550px;bottom:-180px;left:50%;transform:translateX(-50%);opacity:0.09;"></div>
     <div class="container">
@@ -1661,13 +1659,13 @@
         <div class="section-label">Book a free call</div>
         <h2 class="display">Ready to win<br> <span class="line gradient-text">your game 7?</span></h2>
         <p>Book a free 30-minute strategy session. We'll audit your store's SEO and AI visibility, identify the highest-impact opportunities, and give you a clear picture of what's possible - with no pitch and no pressure.</p>
-        <input type="text" class="contact-email" placeholder="Your name" autocomplete="name" />
-        <input type="email" class="contact-email" placeholder="Your email address" autocomplete="email" inputmode="email" />
+        <form action="https://formspree.io/f/xqedvnab" method="POST">
+        <input type="text" name="name" class="contact-email" placeholder="Your name" required />
+        <input type="email" name="email" class="contact-email" placeholder="Your email address" required />
         <div style="text-align:center;margin-top:1rem">
-          <a href="mailto:hello@gamesevenmarketing.com" class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;display:inline-flex">
-            Schedule My Free Strategy Call →
-          </a>
+        <button type="submit" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;border:none;cursor:pointer;">Schedule My Free Strategy Call →</button>
         </div>
+        </form>
         <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1.4rem">You run a Shopify store. You're serious about growing it. That's all we need.</p>
         <div class="cta-microstats">
           <div><div class="cta-ms-num">Free</div><div class="cta-ms-label">30-min strategy call</div></div>
@@ -1677,8 +1675,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1695,8 +1691,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ===== JAVASCRIPT ===== -->
   <script>
     // ---- Navbar scroll ----
     const navbar = document.getElementById('navbar');
