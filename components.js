@@ -15,10 +15,10 @@ var _FOOTER_ICON = '<img class="footer-logo" src="/favicon.png" width="100" heig
     '<div class="nav-inner">' +
       '<a href="/" class="nav-logo">' + _NAV_LOGO + '</a>' +
       '<ul class="nav-links" id="navLinks">' +
+        '<li><a href="/audits">Audits</a></li>' +
         '<li><a href="/#services">Services</a></li>' +
         '<li><a href="/#process">Process</a></li>' +
         '<li><a href="/#roi">ROI Calculators</a></li>' +
-        '<li><a href="/audits">Audits</a></li>' +
         '<li><a href="/#faq">FAQ</a></li>' +
         '<li><a href="/#contact" class="nav-cta">Book a Free Call</a></li>' +
       '</ul>' +
@@ -48,10 +48,10 @@ var _FOOTER_ICON = '<img class="footer-logo" src="/favicon.png" width="100" heig
           _FOOTER_ICON +
         '</div>' +
         '<ul class="footer-links">' +
+          '<li><a href="/audits">Audits</a></li>' +
           '<li><a href="/#services">Services</a></li>' +
           '<li><a href="/#process">Process</a></li>' +
           '<li><a href="/#roi">ROI Calculators</a></li>' +
-          '<li><a href="/audits">Audits</a></li>' +
           '<li><a href="/#faq">FAQ</a></li>' +
           '<li><a href="/#contact">Contact</a></li>' +
         '</ul>' +
