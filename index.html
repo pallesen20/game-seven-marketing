@@ -203,148 +203,15 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="/base.css">
   <style>
     /* ============================================================
-       BRAND COLOR - CHANGE THIS ONE VALUE TO RETHEME EVERYTHING
-       ↓ Only edit the hex below ↓
+       PAGE-SPECIFIC STYLES - index.html
+       Shared base styles live in /base.css
     ============================================================ */
-    :root {
-      --brand: #00e87a;
-    }
 
-    /* ============================================================
-       FULL DESIGN SYSTEM (derived from --brand)
-    ============================================================ */
-    :root {
-      --bg:       #080b0f;
-      --bg-card:  #0f1318;
-      --bg-card2: #131820;
-      --border: rgba(0,232,122,0.2);
-      --border-hover: rgba(255,255,255,0.15);
-      --text:       #f5f5f0;
-      --text-muted: #7a8394;
-      --text-dim:   #4a5260;
-      --accent1: var(--brand);
-      --grad-text: linear-gradient(135deg, var(--brand) 0%, #a8ffdb 100%);
-      --red:   #ff4d4d;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.65;
-      overflow-x: hidden;
-      /* Prevent font size inflation on iOS */
-      -webkit-text-size-adjust: 100%;
-    }
-    ::selection { background: var(--brand); color: #000; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-
-    /* Noise overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.35;
-    }
-    .display {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-    }
-    .heading {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 1em;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    .gradient-text {
-      background: var(--brand);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
-    section { padding: 100px 0; position: relative; }
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent1);
-      margin-bottom: 1.25rem;
-    }
-    .blob { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; opacity: 0.13; }
-    .blob-brand { background: var(--brand); }
-    .blob-teal  { background: #00c9a7; }
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1rem 0;
-      transition: background 0.3s, border-color 0.3s;
-      border-bottom: 1px solid transparent;
-    }
-    nav.scrolled {
-      background: rgba(8,11,15,0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom-color: var(--border);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; }
-    .nav-logo span { background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-    .nav-links a { font-size: 0.85rem; color: var(--text-muted); transition: color 0.2s; font-weight: 400; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      background: var(--brand) !important;
-      color: #000 !important;
-      padding: 0.55rem 1.25rem !important;
-      border-radius: 100px;
-      font-size: 0.85rem !important;
-      font-weight: 600 !important;
-      transition: opacity 0.2s, transform 0.2s !important;
-      white-space: nowrap;
-    }
-    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text);
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 6px;
-      /* Bigger tap target on mobile */
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-    .hamburger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     #hero {
-      min-height: 100svh; /* svh = small viewport height - accounts for mobile browser chrome */
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -352,44 +219,8 @@
       padding-bottom: 3rem;
       overflow: hidden;
     }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(0,232,122,0.08);
-      border: 1px solid rgba(0,232,122,0.2);
-      border-radius: 100px;
-      padding: 0.4rem 1rem;
-      font-size: 0.78rem;
-      color: var(--brand);
-      margin-bottom: 2rem;
-      font-weight: 400;
-      width: fit-content;
-    }
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--brand);
-      border-radius: 50%;
-      flex-shrink: 0;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
 
-    .hero-title {
-      font-size: clamp(2.8rem, 11vw, 7rem);
-      margin-bottom: 1.5rem;
-    }
-    .hero-title .line {
-      display: block;
-      animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    .hero-title .line:nth-child(1) { animation-delay: 0.1s; }
-    .hero-title .line:nth-child(2) { animation-delay: 0.2s; }
-    .hero-title .line:nth-child(3) { animation-delay: 0.3s; }
-    @keyframes slideUp { to { opacity:1; transform:translateY(0); } }
+    .hero-title { font-size: clamp(2.8rem, 11vw, 7rem); margin-bottom: 1.5rem; }
 
     .hero-sub {
       font-size: clamp(1rem, 3vw, 1.15rem);
@@ -399,50 +230,6 @@
       animation: fadeIn 1s 0.5s forwards;
       opacity: 0;
     }
-    @keyframes fadeIn { to { opacity:1; } }
-
-    .hero-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      animation: fadeIn 1s 0.6s forwards;
-      opacity: 0;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--brand);
-      color: #000;
-      padding: 0.9rem 1.75rem;
-      border-radius: 100px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
-      /* Accessible tap target */
-      min-height: 48px;
-      white-space: nowrap;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,232,122,0.3); opacity: 0.9; }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      padding: 0.9rem 1.75rem;
-      border-radius: 100px;
-      font-weight: 400;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
-      min-height: 48px;
-      white-space: nowrap;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: var(--border-hover); transform: translateY(-2px); }
-
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(4, auto);
@@ -464,12 +251,8 @@
       margin-bottom: 0.2rem;
     }
     .stat-label { font-size: 0.82rem; color: var(--text-muted); line-height: 1.35; }
-    #logos {
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
+
+    #logos { padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
     .logos-label { text-align: center; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.75rem; }
     .marquee-wrap {
       overflow: hidden;
@@ -478,144 +261,50 @@
     }
     .marquee-track { display: flex; animation: marquee 22s linear infinite; white-space: nowrap; }
     .marquee-item { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; margin-right: 2rem; }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(var(--marquee-distance)); }
-    }
-    #about {
-      border-top: 1px solid var(--border);
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.04), transparent);
-    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(var(--marquee-distance)); } }
+
+    #about { border-top: 1px solid var(--border); background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.04), transparent); }
     .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .about-left h2 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1.5rem; }
     .about-left p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
     .about-left p em { color: var(--text); font-style: normal; }
-
-    .about-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
+    .about-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; display: flex; flex-direction: column; gap: 1.75rem; }
     .founder-block { display: flex; align-items: flex-start; gap: 1rem; }
-    .founder-image {
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top;
-      height: 50px;
-    }
+    .founder-image { border-radius: 50%; object-fit: cover; object-position: top; height: 50px; }
     .founder-info { flex: 1; min-width: 0; }
     .founder-name-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
     .founder-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; }
-    .founder-linkedin {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 26px; height: 26px;
-      border-radius: 50%;
-      background: #0a66c2;
-      flex-shrink: 0;
-      transition: opacity 0.2s, transform 0.2s;
-    }
+    .founder-linkedin { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: #0a66c2; flex-shrink: 0; transition: opacity 0.2s, transform 0.2s; }
     .founder-linkedin:hover { opacity: 0.85; transform: scale(1.1); }
     .founder-linkedin svg { width: 14px; height: 14px; fill: #fff; }
     .founder-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
     .founder-bio { font-size: 0.87rem; color: var(--text-muted); line-height: 1.75; }
     .about-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-    .about-tag {
-      background: rgba(0,232,122,0.08);
-      border: 1px solid rgba(0,232,122,0.18);
-      color: var(--brand);
-      padding: 0.3rem 0.8rem;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
+    .about-tag { background: rgba(0,232,122,0.08); border: 1px solid rgba(0,232,122,0.18); color: var(--brand); padding: 0.3rem 0.8rem; border-radius: 100px; font-size: 0.75rem; font-weight: 500; }
     .about-divider { height: 1px; background: var(--border); }
-    .slogan-text {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 800;
-      background: var(--brand);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .slogan-text { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .slogan-sub { font-size: 0.78rem; margin-top: 0.35rem; }
 
-    /* ============================================================
-       PAIN POINTS  - 6 spaced cards, 3-col desktop / 2-col tablet / 1-col mobile
-    ============================================================ */
-    #pain {
-      border-top: 1px solid var(--border);
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.03), transparent);
-    }
+    #pain { border-top: 1px solid var(--border); background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,232,122,0.03), transparent); }
     .pain-header { max-width: 680px; margin-bottom: 3.5rem; }
     .pain-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
-
-    .pain-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .pain-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 2rem 1.75rem;
-      transition: background 0.3s, border-color 0.3s;
-    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .pain-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 2rem 1.75rem; transition: background 0.3s, border-color 0.3s; }
     .pain-card:hover { background: var(--bg-card2); border-color: var(--border-hover); }
-
-    /* Custom SVG icon wrapper for pain cards */
-    .pain-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      background: rgba(0,232,122,0.08);
-      border: 1px solid rgba(0,232,122,0.15);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem;
-      flex-shrink: 0;
-    }
+    .pain-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(0,232,122,0.08); border: 1px solid rgba(0,232,122,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; flex-shrink: 0; }
     .pain-icon svg { width: 22px; height: 22px; stroke: var(--brand); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
     .pain-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
     .pain-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
 
-    /* ============================================================
-       SERVICES
-    ============================================================ */
-    #services {
-      border-top: 1px solid var(--border);
-      background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0,232,122,0.03), transparent);
-    }
+    #services { border-top: 1px solid var(--border); background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0,232,122,0.03), transparent); }
     .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 4rem; }
     .services-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
     .services-header p { color: var(--text-muted); font-size: 1rem; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1.5px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      overflow: hidden;
-    }
+    .services-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto auto; gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; }
     .svc-card { background: var(--bg-card); padding: 2.25rem; transition: background 0.3s; position: relative; overflow: hidden; }
     .svc-card:hover { background: var(--bg-card2); }
     .svc-card.featured { grid-row: span 2; display: flex; flex-direction: column; }
-    .svc-card.featured::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 180px; height: 180px;
-      background: radial-gradient(circle, rgba(0,232,122,0.1), transparent 70%);
-      pointer-events: none;
-    }
+    .svc-card.featured::after { content: ''; position: absolute; top: 0; right: 0; width: 180px; height: 180px; background: radial-gradient(circle, rgba(0,232,122,0.1), transparent 70%); pointer-events: none; }
     .svc-card.span2 { grid-column: 2 / -1; }
     .svc-num { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent1); text-transform: uppercase; margin-bottom: 0.85rem; }
     .svc-card h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.9rem; }
@@ -625,9 +314,6 @@
     .step-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1rem; }
     .pill { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 0.25rem 0.8rem; border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); }
 
-    /* ============================================================
-       PROCESS
-    ============================================================ */
     #process { border-top: 1px solid var(--border); }
     .process-header { max-width: 600px; margin-bottom: 4.5rem; }
     .process-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
@@ -637,9 +323,6 @@
     .step-content h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.9rem; }
     .step-content p { color: var(--text-muted); font-size: 0.9rem; max-width: 640px; line-height: 1.8; }
 
-    /* ============================================================
-       COMPARISON
-    ============================================================ */
     #compare { border-top: 1px solid var(--border); }
     .compare-header { text-align: center; margin-bottom: 3.5rem; }
     .compare-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.9rem; }
@@ -656,123 +339,41 @@
     .ci { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
     .ci.no  { background: rgba(255,77,77,0.15); color: var(--red); }
     .ci.yes { background: rgba(0,232,122,0.15); color: var(--brand); }
+    .ci.yes svg {
+    width: 0.6rem;
+    height: 0.6rem;
+}
 
-    /* ============================================================
-       ROI CALCULATORS
-    ============================================================ */
     #roi { border-top: 1px solid var(--border); }
     .roi-header { margin-bottom: 3.5rem; }
     .roi-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
     .roi-header p { color: var(--text-muted); max-width: 560px; font-size: 0.95rem; }
-    .calc-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-    .calc-tabs {
-      display: flex;
-      gap: 0.4rem;
-      margin-bottom: 2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 5px;
-      width: fit-content;
-      flex-wrap: wrap;
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .calc-tab {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.25rem;
-      border-radius: 10px;
-      font-family: 'Syne', sans-serif;
-      font-weight: 600;
-      font-size: 0.83rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      transition: background 0.2s, color 0.2s;
-      white-space: nowrap;
-      min-height: 44px;
-    }
+    .calc-wrapper { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 4rem; align-items: start; }
+    .calc-tabs { display: flex; gap: 0.4rem; margin-bottom: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 5px; width: fit-content; flex-wrap: wrap; grid-column: 1; grid-row: 1; }
+    .calc-tab { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; border-radius: 10px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.83rem; cursor: pointer; background: none; border: none; color: var(--text-muted); transition: background 0.2s, color 0.2s; white-space: nowrap; min-height: 44px; }
     .calc-tab svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
     .calc-tab.active { background: var(--brand); color: #000; }
     .calc-tab.active svg { stroke: #000; }
-
     .calc-panel { display: none; }
     .calc-panel.active { display: contents; }
-    .calc-intro {
-  grid-column: 1;
-  grid-row: 2;
-}
+    .calc-intro { grid-column: 1; grid-row: 2; }
     .calc-intro h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
     .calc-intro p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.9rem; }
     .calc-disclaimer { font-size: 0.78rem; color: var(--text-muted); }
-
     .calc-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; grid-column: 2; grid-row: 1 / 3; }
-
     .roi-field { margin-bottom: 1.4rem; }
     .roi-field label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.55rem; }
-    .roi-field input[type="number"] {
-      width: 100%;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.8rem 1rem;
-      font-size: 1rem;
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      transition: border-color 0.2s;
-      outline: none;
-      -webkit-appearance: none;
-    }
+    .roi-field input[type="number"] { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem 1rem; font-size: 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; transition: border-color 0.2s; outline: none; -webkit-appearance: none; }
     .roi-field input[type="number"]:focus { border-color: var(--brand); }
     .roi-field input[type="number"]::-webkit-inner-spin-button { display: none; }
-
-    input[type="range"] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 4px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 4px;
-      cursor: pointer;
-      outline: none;
-    }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: rgba(255,255,255,0.08); border-radius: 4px; cursor: pointer; outline: none; }
     input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--brand); cursor: pointer; }
     input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--brand); cursor: pointer; border: none; }
     .range-labels { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.4rem; }
-
     .roi-select-group { display: flex; gap: 0.4rem; }
-    .roi-select-group button {
-      flex: 1;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.7rem;
-      color: var(--text-muted);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.875rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      min-height: 44px;
-    }
+    .roi-select-group button { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem; color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; min-height: 44px; }
     .roi-select-group button.active { background: var(--brand); border-color: var(--brand); color: #000; font-weight: 600; }
-
-    .roi-result {
-      margin-top: 1.4rem;
-      padding: 1.4rem;
-      background: rgba(0,232,122,0.06);
-      border: 1px solid rgba(0,232,122,0.18);
-      border-radius: 16px;
-      text-align: center;
-    }
+    .roi-result { margin-top: 1.4rem; padding: 1.4rem; background: rgba(0,232,122,0.06); border: 1px solid rgba(0,232,122,0.18); border-radius: 16px; text-align: center; }
     .roi-result .result-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.4rem; }
     .roi-result .result-num { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .roi-result .result-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.35rem; }
@@ -781,9 +382,6 @@
     .roi-mini-stat .mval { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .roi-mini-stat .mlabel { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.15rem; }
 
-    /* ============================================================
-       TESTIMONIALS
-    ============================================================ */
     #testimonials { border-top: 1px solid var(--border); }
     .testimonials-header { margin-bottom: 3.5rem; }
     .testimonials-header h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
@@ -798,112 +396,43 @@
     .testi-name { font-family: 'Syne', sans-serif; font-size: 0.875rem; font-weight: 700; }
     .testi-role { font-size: 0.75rem; color: var(--text-muted); }
 
-    /* ============================================================
-       FAQ
-    ============================================================ */
     #faq { border-top: 1px solid var(--border); }
     .faq-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
     .faq-left h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
     .faq-left p { color: var(--text-muted); font-size: 0.9rem; }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.35rem 0; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; min-height: 56px; }
-    .faq-q:hover { color: var(--brand); }
-    .faq-icon { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.3s, background 0.3s, border-color 0.3s; }
-    .faq-icon svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; }
-    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--brand); border-color: var(--brand); color: #000; }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .faq-item.open .faq-a { max-height: 500px; }
-    .faq-a p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.8; padding-bottom: 1.5rem; }
 
-    /* ============================================================
-       CONTACT CTA
-    ============================================================ */
     #contact { border-top: 1px solid var(--border); background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,232,122,0.06), transparent); }
     .contact-inner { text-align: center; max-width: 700px; margin: 0 auto; }
     .contact-inner h2 { font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 1.4rem; }
     .contact-inner > p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.25rem; }
-    .contact-email {
-      width: 100%;
-      max-width: 520px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.875rem 1rem;
-      font-size: 0.95rem;
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      outline: none;
-      transition: border-color 0.2s;
-      display: block;
-      margin: 0 auto 0.65rem;
-      -webkit-appearance: none;
-      min-height: 48px;
-    }
+    .contact-email { width: 100%; max-width: 520px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; padding: 0.875rem 1rem; font-size: 0.95rem; color: var(--text); font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; display: block; margin: 0 auto 0.65rem; -webkit-appearance: none; min-height: 48px; }
     .contact-email:focus { border-color: var(--brand); }
     .contact-email::placeholder { color: var(--text-muted); }
-    .cta-microstats { display: flex; gap: 2.5rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; gap: 1.5rem 3rem; }
+    .cta-microstats { display: flex; justify-content: center; margin-top: 3rem; flex-wrap: wrap; gap: 1.5rem 3rem; }
     .cta-ms-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; background: var(--brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .cta-ms-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
-    footer { border-top: 1px solid var(--border); padding: 2.5rem 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; }
-    .footer-links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: wrap; }
-    .footer-links a { font-size: 0.82rem; color: var(--text-muted); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text-muted); }
-    .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
-    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 960px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 62px; left: 0; right: 0;
-        background: rgba(8,11,15,0.97);
-        padding: 1.75rem 1.25rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
-      .nav-links.open li { border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; }
-      .nav-links.open li:last-child { border-bottom: none; padding-bottom: 0; }
-      .nav-links.open a { font-size: 1.05rem; color: var(--text); }
-
-      section { padding: 80px 0; }
-
       .about-inner { grid-template-columns: 1fr; gap: 3rem; }
       .services-header { grid-template-columns: 1fr; gap: 1.25rem; }
       .services-grid { grid-template-columns: 1fr; }
       .svc-card.featured, .svc-card.span2 { grid-row: span 1; grid-column: span 1; }
-
       .pain-grid { grid-template-columns: repeat(2, 1fr); }
-
       .calc-wrapper { display: block; }
       .calc-tabs { margin-bottom: 1.5rem; }
       .calc-panel.active { display: flex; flex-direction: column; gap: 2.5rem; }
       .calc-tab { flex: 1; justify-content: center; }
-
       .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .testimonials-scroll { grid-template-columns: 1fr 1fr; }
       .compare-grid { grid-template-columns: 1fr; }
-
       .hero-stats { grid-template-columns: repeat(2, auto); gap: 1.5rem 3rem; }
       .process-step { grid-template-columns: 60px 1fr; gap: 1.5rem; }
       .step-num { font-size: 2.2rem; }
-
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-      .footer-links { gap: 1.25rem; }
     }
     @media (max-width: 600px) {
-      section { padding: 64px 0; }
       .footer-logo { margin: 0 auto; }
       .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
       .hero-badge { font-size: 0.72rem; }
-      .hero-actions { flex-direction: column; }
-      .hero-actions .btn-primary,
-      .hero-actions .btn-secondary { width: 100%; justify-content: center; }
       .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
       .pain-grid { grid-template-columns: 1fr; gap: 1rem; }
       .pain-card { padding: 1.5rem; }
@@ -931,22 +460,7 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6B2NTDJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="75.111 93.677 100 58.058" width="100" height="58.058"><defs><clipPath id="a"><path d="M78.768 105.802h20.526v19.485H78.768Zm0 0"/></clipPath></defs><path fill="#00e87a" d="M104.737 110.965c.73-.418 1.402-.991 2.04-1.637 1.532-1.55 2.876-3.51 4.33-4.879a17 17 0 0 1 1.702-1.395c2.297-1.667 4.939-2.894 7.12-4.738 1.186-1.002 2.376-2.561 3.775-3.58.676-.492 1.399-.862 2.184-1.016.702-.138 1.28.073 1.774.479.86.709 1.42 2.127 2.009 2.892 1.267 1.643 2.679 3.233 3.924 4.924a25 25 0 0 1 1.516 2.296c.315.545.558 1.515.932 2.312.189.403.394.77.729.907.012-.005.044-.018.062-.028a1 1 0 0 0 .111-.081c.148-.125.288-.3.42-.486.35-.497.63-1.083.754-1.31a14.7 14.7 0 0 1 1.674-2.403c.918-1.085 1.959-2.069 3.005-3.061.349-.33.962-.952 1.574-1.211.41-.173.825-.202 1.209-.046.297.121.572.32.827.565.446.427.827 1.01 1.198 1.398.661.69 1.415 1.298 2.104 1.965.317.306.62.624.898.966.386.474.658 1.081 1.014 1.599.118.172.246.331.403.462.33.276.716.231 1.109.192.622-.06 1.27-.154 1.904.023.33.093.658.253.978.52a11 11 0 0 1 .81.748c.964.974 1.77 2.087 2.811 2.982a91 91 0 0 0 5.675 4.483 125 125 0 0 0 5.983 4.088c.953.614 1.595 1.556 2.416 2.293.276.248.578.468.939.621a.76.76 0 0 1 .399.997.76.76 0 0 1-.997.399 4.9 4.9 0 0 1-1.352-.899c-.759-.691-1.331-1.59-2.213-2.168a127 127 0 0 1-6.02-4.183 92 92 0 0 1-5.725-4.598c-1.062-.927-1.886-2.071-2.868-3.079a10 10 0 0 0-.71-.666c-.45-.381-.939-.349-1.407-.307-.519.047-1.027.116-1.502.035a2.17 2.17 0 0 1-1.063-.49 3.6 3.6 0 0 1-.634-.725c-.333-.493-.577-1.073-.94-1.525a10 10 0 0 0-.789-.861c-.694-.684-1.454-1.309-2.121-2.015-.314-.333-.633-.812-.996-1.211-.182-.201-.373-.386-.596-.479-.065-.027-.134-.01-.202.012a1.6 1.6 0 0 0-.401.212c-.357.248-.679.582-.89.78-1.023.953-2.042 1.897-2.939 2.943a13.5 13.5 0 0 0-1.562 2.199c-.19.341-.716 1.4-1.302 1.97-.458.445-.971.611-1.434.432-.47-.182-.846-.573-1.139-1.085-.477-.832-.726-2.02-1.08-2.645-.576-1.017-1.249-1.98-1.962-2.918-1.089-1.434-2.269-2.809-3.342-4.224-.478-.63-.917-1.726-1.546-2.458-.331-.385-.716-.668-1.243-.57-.867.164-1.639.659-2.358 1.266-1.153.972-2.176 2.229-3.194 3.075-2.213 1.842-4.885 3.063-7.213 4.724-.569.406-1.116.838-1.63 1.314-1.457 1.351-2.808 3.291-4.345 4.821-.711.709-1.462 1.331-2.276 1.779-.175.097-.462.096-.788-.066-.566-.282-1.372-1.036-1.523-1.172l-3.404-2.909c-.275-.231-.588-.604-.933-.884-.183-.148-.373-.275-.577-.296-.387-.039-.854.163-1.346.447-1.162.672-2.415 1.84-3.083 2.278-2.593 1.702-5.189 3.405-7.749 5.161a165 165 0 0 0-5.052 3.595c-.732.544-2.611 1.601-3.878 2.701-.577.5-1.03 1.001-1.143 1.468a.237.237 0 1 1-.462-.11c.128-.541.62-1.143 1.282-1.728 1.268-1.119 3.152-2.201 3.884-2.754a170 170 0 0 1 5.04-3.647c2.549-1.778 5.136-3.503 7.718-5.228.672-.449 1.931-1.636 3.1-2.324.636-.374 1.254-.597 1.756-.55.26.023.514.134.755.296.426.288.814.755 1.143 1.028l3.445 2.898c.15.132 1.018.973 1.495 1.098m0 0" fill-rule="evenodd"/><path fill="#00e87a" d="M96.924 106.376c-.489-.029-.757.438-1.027.785-.545.701-1.028 1.449-1.64 2.096-.564.598-1.303.943-1.927 1.471-1.073.906-1.964 1.997-3.147 2.773-1.403.92-2.904 1.675-4.144 2.825-1.046.971-1.984 2.019-2.896 3.115-.526.63-.51.609-1.041 1.258l-.327.397c-.087.103-.323.425-.273.3.078-.197.481-.527.61-.654a17 17 0 0 1 1.998-1.666c.018-.012.713-.583.845-.458.096.094-.082.261-.153.376-.16.259-.43.634-.609.86-.913 1.152-1.919 2.225-2.799 3.404-.287.384-.347.46-.599.832q-.09.133-.174.267c-.043.068-.171.239-.093.224.299-.06.775-.786.937-.969 1.001-1.133 2.006-2.26 3.099-3.306a89 89 0 0 1 5.663-4.945c1.981-1.592 4.051-3.069 5.881-4.841 1.032-.999 2.291-1.965 3.017-3.229.08-.14.636-.804.572-.931"/><g clip-path="url(#a)"><path fill="#00e87a" d="M80.65 121.963a.6.6 0 0 1-.132.019c-.27.011-.458-.111-.551-.385-.018-.053-.067-.192.018-.41.043-.109.135-.249.258-.388.104-.116.233-.238.337-.334l.096-.116 1.055-1.252c.469-.548.943-1.086 1.434-1.607a27 27 0 0 1 1.544-1.52 13 13 0 0 1 1.667-1.252c.844-.543 1.729-1.023 2.581-1.564.342-.217.66-.46.964-.719.748-.634 1.422-1.35 2.185-1.975.448-.366.952-.642 1.413-.979.181-.132.355-.273.515-.436a9 9 0 0 0 .514-.577c.394-.479.753-.986 1.143-1.469.176-.219.355-.48.58-.65a.95.95 0 0 1 .668-.211.237.237 0 0 1 .222.251.237.237 0 0 1-.251.223.5.5 0 0 0-.335.125c-.187.153-.327.39-.472.583-.373.498-.716 1.019-1.095 1.513a10 10 0 0 1-.526.634 5 5 0 0 1-.578.526c-.439.344-.923.627-1.351.999-.74.645-1.389 1.38-2.114 2.035a9.4 9.4 0 0 1-1.03.818c-.833.564-1.702 1.069-2.529 1.635-.53.362-1.042.751-1.512 1.2-.458.433-.892.883-1.312 1.345a.67.67 0 0 1 .307.167.64.64 0 0 1 .204.394 85 85 0 0 1 1.404-1.238 95 95 0 0 1 2.913-2.411c1.194-.948 2.419-1.853 3.605-2.807a34 34 0 0 0 2.27-1.968c.618-.59 1.316-1.167 1.933-1.802.391-.403.749-.828 1.026-1.301.062-.107.307-.83.522-.773a.46.46 0 0 1 .248-.337.46.46 0 0 1 .615.205.58.58 0 0 1-.002.488c-.101.246-.506.758-.576.881-.306.543-.703 1.036-1.14 1.5-.617.654-1.317 1.248-1.935 1.855-.738.723-1.515 1.4-2.31 2.053-1.177.969-2.392 1.891-3.576 2.854a95 95 0 0 0-2.855 2.413 82 82 0 0 0-2.749 2.526 35 35 0 0 0-1.248 1.272 82 82 0 0 0-1.806 2.008c-.132.151-.468.638-.759.89a1.16 1.16 0 0 1-.505.271.6.6 0 0 1-.438-.072.6.6 0 0 1-.265-.319.63.63 0 0 1-.005-.406c.025-.083.128-.247.175-.325l.187-.288.614-.857a26 26 0 0 1 .736-.935m0 0" fill-rule="evenodd"/></g><path fill="#00e87a" d="M124.775 94.601a397 397 0 0 1-4.797 4.466c-1.512 1.387-2.952 2.761-4.783 3.719-2.222 1.164-4.033 2.653-5.847 4.381a70 70 0 0 0-4.973 5.213c-.481.561-.94 1.133-1.372 1.733-.186.257-.371.513-.546.778-.055.083-.22.323-.144.259.945-.787 1.58-1.863 2.706-2.471.335-.181.711-.333 1.095-.351.517-.024.894.244 1.336-.132.674-.572 1.16-1.345 1.822-1.938 3.794-3.399 7.653-6.708 11.871-9.579 1.686-1.147 3.458-2.232 5.022-3.548.613-.516 1.467-1.295 1.467-2.162"/><path fill="#00e87a" d="M105.653 111.791q.215-.05.435-.06c.315-.014.58.079.838.07a.23.23 0 0 0 .141-.059 5 5 0 0 0 .344-.324c.501-.518.93-1.117 1.47-1.598 2.293-2.038 4.609-4.044 7.016-5.939a81 81 0 0 1 4.959-3.628c1.014-.681 2.059-1.339 3.07-2.038.665-.46 1.316-.936 1.935-1.449.336-.279.756-.638 1.038-1.055.157-.232.275-.48.276-.743a.459.459 0 1 1 .918 0c.003.441-.164.868-.422 1.261-.326.494-.805.932-1.196 1.266a28 28 0 0 1-1.983 1.528c-1.007.714-2.047 1.387-3.056 2.082a82 82 0 0 0-4.855 3.637c-2.369 1.905-4.654 3.913-6.914 5.955-.517.466-.921 1.045-1.4 1.545q-.205.215-.43.408a1.4 1.4 0 0 1-.636.317 1.8 1.8 0 0 1-.583.006c-.147-.018-.301-.055-.475-.047-.136.006-.27.039-.4.083a3 3 0 0 0-.437.198c-.29.157-.542.35-.775.561-.643.582-1.161 1.282-1.834 1.841-.185.153-.338.149-.4.149a.56.56 0 0 1-.545-.35.58.58 0 0 1-.018-.463 4 4 0 0 1 .225-.385l.56-.796a24 24 0 0 1 .689-.9 31 31 0 0 1 .722-.864 62 62 0 0 1 2.46-2.678 78 78 0 0 1 2.595-2.537c.93-.865 1.857-1.671 2.836-2.403a21.5 21.5 0 0 1 3.171-1.982c.714-.361 1.37-.786 1.995-1.252.958-.715 1.845-1.523 2.757-2.334l4.866-4.384a.24.24 0 0 1 .336.01.237.237 0 0 1-.009.335l-4.725 4.55c-.904.853-1.782 1.701-2.736 2.458-.648.516-1.331.986-2.078 1.392a20.6 20.6 0 0 0-2.986 1.979 34 34 0 0 0-2.701 2.396 79 79 0 0 0-2.512 2.549 70 70 0 0 0-1.546 1.694m0 0" fill-rule="evenodd"/><path fill="#00e87a" d="M143.931 100.203c-.258-.23-.851.899-.86.913a43 43 0 0 1-2.732 3.41c-2.397 2.663-4.805 5.42-7.301 7.989-1.265 1.301-2.57 2.557-3.8 3.892-.543.589-.589.663-1.078 1.232-.112.13-.229.257-.339.391-.074.09-.298.326-.184.297.229-.057.643-.539.79-.668.89-.78 1.765-1.577 2.66-2.351.546-.473 1.117-1.045 1.776-1.365.497-.242.595.49.986.061 1.51-1.656 2.84-3.176 4.632-4.56.497-.383 1.089-.978 1.715-1.15.312-.085.31.441.318.585.045.776-.039 1.58.791 1.962.87.4 1.885.507 2.793.8 1.585.512 3.049 1.267 4.415 2.218.898.626 1.756 1.311 2.628 1.972.205.154.611.457.842.616.089.061.31.248.288.144-.126-.591-1.287-1.356-1.715-1.684-1.735-1.332-4.493-2.374-5.658-4.303-.299-.495-.12-1.141-.225-1.694-.358-1.883.203-2.941.698-4.724.206-.744.183-1.521.36-2.269.11-.468.616-1.12.616-1.551"/><path fill="#00e87a" d="M143.825 100.415c-.048.048-.119.163-.173.235-.197.271-.369.609-.374.617a53 53 0 0 1-1.305 1.768 37 37 0 0 1-1.399 1.703c-1.417 1.616-2.838 3.265-4.28 4.887a135 135 0 0 1-2.932 3.204l-.493.514c.258-.035.507.046.677.126.866-.958 1.678-1.872 2.559-2.738a23 23 0 0 1 2.008-1.761c.359-.277.767-.658 1.2-.926.234-.146.477-.262.722-.329.388-.107.654.032.841.276.173.226.226.687.235.854.019.347.003.702.079 1.01a.62.62 0 0 0 .361.444c.235.108.482.192.735.265.659.189 1.351.307 1.991.515q.205.067.408.14a5 5 0 0 1-.229-.349 1.8 1.8 0 0 1-.228-.684c-.052-.385.016-.805-.054-1.182a6.2 6.2 0 0 1-.051-2.089c.136-.917.469-1.75.784-2.858q.056-.2.092-.402c.11-.612.129-1.239.276-1.846.083-.336.348-.764.519-1.146.048-.109.093-.209.093-.297a.46.46 0 0 1 .46-.459.46.46 0 0 1 .458.459c0 .146-.034.31-.096.483-.136.378-.445.828-.524 1.175-.136.591-.143 1.2-.243 1.795a5 5 0 0 1-.107.495c-.29 1.063-.606 1.862-.727 2.741a5.2 5.2 0 0 0 .062 1.759c.077.392.017.83.074 1.229.016.103.04.203.096.293.331.542.803 1.001 1.341 1.42 1.316 1.026 3.007 1.799 4.21 2.714.304.231.957.674 1.393 1.126.283.293.475.605.535.877a.56.56 0 0 1-.08.448.56.56 0 0 1-.373.249.6.6 0 0 1-.355-.042c-.088-.038-.26-.164-.341-.22l-.867-.628-2.617-1.95a17 17 0 0 0-2.059-1.225 15.4 15.4 0 0 0-2.209-.903c-.628-.202-1.308-.313-1.954-.497a6 6 0 0 1-.906-.325c-.491-.226-.764-.554-.924-.936-.168-.402-.184-.884-.208-1.368q-.062.04-.124.083c-.342.239-.664.535-.953.758a22 22 0 0 0-1.906 1.666c-.913.889-1.754 1.825-2.66 2.812a1 1 0 0 1-.434.291.78.78 0 0 1-.607-.058 3 3 0 0 1-.2-.129 4 4 0 0 0-.577.379c-.352.27-.683.579-1.005.854l-2.674 2.33c-.121.104-.412.425-.65.594a1.1 1.1 0 0 1-.368.182.53.53 0 0 1-.481-.096.52.52 0 0 1-.209-.449.6.6 0 0 1 .081-.274c.05-.087.194-.25.258-.326l.35-.397 1.102-1.235q.564-.6 1.143-1.182c.895-.901 1.81-1.779 2.705-2.68a138 138 0 0 0 2.989-3.112c1.481-1.585 2.943-3.196 4.399-4.774a36 36 0 0 0 1.422-1.636 53 53 0 0 0 1.338-1.712c.008-.012.38-.679.675-.909.209-.162.407-.162.55-.031a.24.24 0 0 1 .02.336.24.24 0 0 1-.284.053m-16.179 17.382a.5.5 0 0 0-.14.015c-.011.003-.046-.001-.038.012.039.067.104.041.178-.027m16.179-17.384c.029.013.056.019.049-.005s-.026-.018-.049.005m0 0" fill-rule="evenodd"/><path d="M84.217 137.549h-6.125l-1.969-2.003v-7.108l1.969-2.021h4.089l2.036 1.919v1.953h-3.338v-.884h-1.418v5.173h1.418v-.936h-.535v-2.701h3.872Zm-2.887-5.64v.785h.55v2.853h-2.803l-.618-.618v-5.906l.618-.584h2.253l.55.584v.383h1.335v-.634l-1.518-1.387h-3.223l-1.351 1.387v6.391l1.351 1.418h4.74v-4.673Zm3.671 2.67h.983l2.655-8.161h3.137l2.537 8.161h1.001v2.97h-4.688v-2.803h.717l-.185-.634h-2.117l-.201.634h.683v2.803h-4.522Zm3.52 2.003v-1.035h-.868l.735-2.169h3.387l.701 2.169h-.85v1.035h2.686v-1.035h-.701l-2.587-8.161H89.34l-2.704 8.161h-.634v1.035Zm2.988-4.055h-2.837l1.351-4.089h.201Zm-1.771-.751h.735l-.349-1.152Zm6.342 2.803h.785v-5.173h-.785v-2.988h3.838l1.953 3.421 1.969-3.421h3.838v2.988h-.767v5.173h.767v2.97h-4.639v-2.97h.801v-2.587l-1.236 2.052h-1.468l-1.218-2.052v2.587h.785v2.97H96.08Zm3.622 2.003v-1.035h-.751v-6.993l2.621 4.506h.584l2.636-4.506v6.993h-.751v1.035h2.636v-1.035h-.735v-7.108h.735v-1.053h-2.302l-2.503 4.19-2.438-4.19h-2.352v1.053h.751v7.108h-.751v1.035Zm8.977-2.003h.767v-5.173h-.767v-2.988h8.86v3.572h-3.338v-.584h-1.4v1.1h2.62v2.821H112.8v1.252h1.4v-.751h3.338v3.721h-8.86Zm7.859 2.003v-1.786h-1.335v.751H111.8v-3.205h2.636v-.884H111.8v-3.02h3.403v.6h1.335v-1.653h-6.858v1.053h.785v7.108h-.785v1.035Zm0 0" fill="#fff"/><g transform="translate(706.743 824.232)" fill="#fff"/><path d="M127.571 133.643v.936h1.418v-1.536h-3.304l-1.452-1.536v-3.171l1.919-1.919h4.422l1.752 1.802v1.804h-3.338v-.618h-1.418v.983h3.471l1.353 1.453v3.789l-1.919 1.919h-4.323l-1.919-1.919v-1.987Zm-2.336 1.52 1.335 1.418h3.387l1.369-1.418v-2.905l-.986-.983h-3.403l-.368-.386v-1.885l.618-.566h2.169l.634.566v.167h1.335v-.417l-1.351-1.369h-3.405l-1.335 1.369v2.355l.934 1.051h3.473l.349.383v2.386l-.634.701h-2.169l-.618-.701v-.451h-1.335Zm8.227-.584h.767v-5.173h-.767v-2.988h8.86v3.572h-3.338v-.584h-1.4v1.1h2.62v2.821h-2.621v1.252h1.4v-.751h3.338v3.721h-8.86Zm7.859 2.003v-1.786h-1.335v.751h-3.403v-3.205h2.636v-.884h-2.636v-3.02h3.403v.6h1.335v-1.653h-6.858v1.053h.785v7.108h-.785v1.035Zm12.2-7.176h-1.27l-2.618 8.143h-2.754l-2.722-8.143h-1.15v-2.988h4.873v2.988h-.568l.918 2.72.868-2.72h-.584v-2.988h5.006Zm-4.005-2.021v1.054h.816l-2.102 6.54-2.136-6.54h.785v-1.053h-2.871v1.053h.899l2.688 8.143h1.285l2.618-8.143h1.02v-1.053Zm4.788 7.194h.767v-5.173h-.767v-2.988h8.86v3.572h-3.338v-.584h-1.4v1.1h2.62v2.821h-2.621v1.252h1.4v-.751h3.338v3.721h-8.86Zm7.859 2.003v-1.786h-1.335v.751h-3.403v-3.205h2.636v-.884h-2.636v-3.02h3.403v.6h1.335v-1.653h-6.858v1.053h.785v7.108h-.785v1.035Zm1.903-2.003h.785v-5.173h-.785v-2.988h4.039l2.67 5.006v-2.203h-.785v-2.803h4.373v2.988h-.751v8.143h-2.92l-3.072-5.575v2.722h.936v2.853h-4.49Zm3.554 2.003v-1.051h-.767v-6.793l4.404 7.843h1.369v-8.143h.751v-1.053h-2.469v1.053h.683v6.258l-4.104-7.311h-2.42v1.053h.785v7.092h-.785v1.051Zm-90.996 12.184h.785v-5.173h-.785v-2.988h3.838l1.953 3.421 1.969-3.421h3.838v2.988h-.767v5.173h.767v2.97h-4.639v-2.97h.801v-2.587l-1.236 2.052H81.68l-1.218-2.052v2.587h.785v2.97h-4.623Zm3.622 2.003v-1.035h-.751v-6.993l2.621 4.506h.584l2.636-4.506v6.993h-.751v1.035h2.636v-1.035h-.735v-7.108h.735v-1.053h-2.302l-2.503 4.19-2.438-4.19h-2.352v1.053h.751v7.108h-.751v1.035Zm9.712-2.003h.983l2.655-8.161h3.137l2.537 8.161h1.001v2.97h-4.688v-2.803h.717l-.185-.634h-2.117l-.201.634h.683v2.803h-4.522Zm3.52 2.003v-1.035h-.868l.735-2.169h3.387l.701 2.169h-.85v1.035h2.686v-1.035h-.701l-2.587-8.161h-1.684l-2.704 8.161h-.634v1.035Zm2.988-4.055h-2.837l1.351-4.089h.201Zm-1.771-.751h.735l-.349-1.152Zm7.294 2.803h.767v-5.173h-.767v-2.988h6.826l1.935 1.919v3.137l-1.1 1.02.934 2.086h.986v2.97h-4.474v-2.754h.318l-.717-1.418h-.584v1.418h.535v2.754h-4.659Zm3.656 2.003v-1.051h-.535v-3.038h2.151l1.418 3.038h-.615v1.051h2.519v-1.051h-.55l-1.502-3.171 1.218-1.202v-2.404l-1.369-1.369h-5.389v1.053h.751v7.092h-.751v1.051Zm2.769-5.807-.668.699h-2.636v-3.035h2.636l.668.566Zm-2.302-1.369v1.066h1.301v-1.066Zm7.192 5.173h.785v-5.173h-.785v-2.988h4.605v2.72h-.482v1.285l1.134-1.285h-.201v-2.72h4.824v2.988h-1.319l-1.452 1.518 1.669 3.656h1.103v2.97h-4.824V148.9h.668l-.668-1.502-1.085 1.119v.383h.634v2.837h-4.605Zm3.622 2.003v-1.035h-.501v-1.57l2.12-2.352 1.768 3.922h-.952v1.035h2.821v-1.035h-.686l-2.135-4.772 2.136-2.336h.686v-1.053h-2.822v1.053h.952l-3.888 4.237v-4.237h.501v-1.053h-2.621v1.053h.785v7.108h-.785v1.035Zm8.043-2.003h.767v-5.173h-.767v-2.988h8.86v3.572h-3.338v-.584h-1.4v1.1h2.62v2.821h-2.621v1.252h1.4v-.751h3.338v3.721h-8.86Zm7.859 2.003v-1.788h-1.335v.751h-3.403v-3.205h2.636v-.884h-2.636v-3.02h3.403v.6h1.335v-1.653h-6.858v1.053h.785v7.108h-.785v1.035Zm4.906-2.003h.785v-5.173h-.402v1.1h-2.72v-4.089h9.614v4.089h-2.772v-1.1h-.399v5.173h.766v2.97h-4.873Zm3.872 2.003v-1.035h-.767v-7.108h2.269v1.134h.902v-2.188h-7.661v2.188h.902v-1.134h2.253v7.108h-.769v1.035Zm9.962-7.176h-.767v5.173h.767v2.97h-4.89v-2.97h.785v-5.173h-.785v-2.988h4.889Zm-3.888-2.021v1.054h.785v7.108h-.785v1.035h2.887v-1.035h-.767v-7.108h.767v-1.053Zm5.84 7.194h.785v-5.173h-.785v-2.988h4.039l2.67 5.006v-2.203h-.785v-2.803h4.373v2.988h-.751v8.143h-2.92l-3.072-5.575v2.722h.936v2.853h-4.49Zm3.554 2.003v-1.051h-.767v-6.793l4.404 7.843h1.369v-8.143h.751v-1.053h-2.469v1.053h.683v6.258l-4.104-7.311h-2.42v1.053h.785v7.092h-.785v1.051Zm16.621.967h-6.125l-1.969-2.003v-7.108l1.969-2.021h4.089l2.036 1.919v1.953h-3.338v-.884h-1.418v5.173h1.418v-.936h-.535v-2.701h3.872Zm-2.887-5.64v.785h.55v2.853h-2.803l-.618-.618v-5.906l.618-.584h2.253l.55.584v.383h1.335v-.634l-1.518-1.387h-3.223l-1.351 1.387v6.391l1.351 1.418h4.74v-4.673Zm0 0" fill="#fff"/></svg></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#roi">ROI</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact" class="nav-cta">Book a Free Call</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <nav id="navbar"></nav>
   <section id="hero">
     <div class="blob blob-brand" style="width:600px;height:600px;top:-150px;left:-220px;"></div>
     <div class="blob blob-teal"  style="width:380px;height:380px;top:280px;right:-80px;"></div>
@@ -970,10 +484,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="stat-num">10+</div>
           <div class="stat-label">Years of SEO expertise</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">$45M+</div>
+        <!-- <div class="stat-item">
+          <div class="stat-num">€45M+</div>
           <div class="stat-label">Revenue generated for clients</div>
-        </div>
+        </div> -->
         <div class="stat-item">
           <div class="stat-num">60+</div>
           <div class="stat-label">Shopify stores optimized</div>
@@ -1266,13 +780,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="compare-col us">
           <div class="compare-col-title">Game Seven Marketing</div>
           <ul class="compare-list">
-            <li><span class="ci yes">✅</span>Exclusively SEO, AEO and CRO - nothing else, ever</li>
-            <li><span class="ci yes">✅</span>Shopify is our full-time obsession - we've built and sold brands on it</li>
-            <li><span class="ci yes">✅</span>10+ years of technical SEO expertise, led by our founder</li>
-            <li><span class="ci yes">✅</span>Built for AI-first search - early movers in AEO for e-commerce</li>
-            <li><span class="ci yes">✅</span>Every metric tied to revenue - that's the only number that matters</li>
-            <li><span class="ci yes">✅</span>Senior consultants on every account - no handoffs, no juniors</li>
-            <li><span class="ci yes">✅</span>Guaranteed results or we keep working until we deliver</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Exclusively SEO, AEO and CRO - nothing else, ever</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Shopify is our full-time obsession - we've built and sold brands on it</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>10+ years of technical SEO expertise, led by our founder</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Built for AI-first search - early movers in AEO for e-commerce</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Every metric tied to revenue - that's the only number that matters</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Senior consultants on every account - no handoffs, no juniors</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Guaranteed results or we keep working until we deliver</li>
           </ul>
         </div>
       </div>
@@ -1662,64 +1176,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <img class="footer-logo" src="/favicon.png" width="100" height="80" alt="Game Seven Marketing favicon">
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#roi">ROI Calculators</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="footer-copy">© 2026 Game Seven Marketing. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
+  <footer id="site-footer"></footer>
+  <script src="/components.js"></script>
   <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-    });
-    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }));
-
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    function toggleFaq(el) {
-      const item = el.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const navH = document.getElementById('navbar').offsetHeight;
-          const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-
     // ---- Calculator tabs ----
     function switchCalc(id, btn) {
       document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
