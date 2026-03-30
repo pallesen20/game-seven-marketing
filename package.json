@@ -1,12 +1,13 @@
 {
   "name": "game-seven-marketing",
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "serve .",
-    "build": "echo 'No build step required'",
-    "start": "serve ."
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "devDependencies": {
-    "serve": "^14.2.4"
+  "dependencies": {
+    "astro": "^5.0.0"
   }
 }

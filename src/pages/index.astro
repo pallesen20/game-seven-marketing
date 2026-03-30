@@ -1,0 +1,719 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { testimonials, reviewSchema } from '../data/testimonials';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Game Seven Marketing",
+  "description": "Niche experts in SEO, AI Optimization and CRO for Shopify e-commerce brands",
+  "foundingDate": "2025",
+  "url": "https://gamesevenmarketing.com",
+  "logo": "https://gamesevenmarketing.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+4581952078",
+    "contactType": "Customer Service",
+    "email": "hello@gamesevenmarketing.com"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/jesperpallesen20/"
+  ]
+};
+
+const orgRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Game Seven Marketing",
+  "url": "https://gamesevenmarketing.com",
+  "logo": "https://gamesevenmarketing.com/logo.png",
+  "description": "Niche experts in SEO, AI Optimization and CRO for Shopify e-commerce brands.",
+  "areaServed": "Worldwide",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "9",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": reviewSchema
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Shopify SEO, AI Optimization and CRO",
+  "provider": {
+    "@type": "Organization",
+    "name": "Game Seven Marketing",
+    "url": "https://gamesevenmarketing.com"
+  },
+  "areaServed": "Worldwide",
+  "description": "Niche experts in SEO, AI Optimization and CRO for Shopify e-commerce brands."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does SEO take to show results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technical SEO fixes can show ranking improvements within weeks. Content and authority-building typically compounds over 3\u20136 months, after which it accelerates significantly. Most clients see meaningful organic traffic increases within 90 days and substantial revenue impact by month 4\u20136. Unlike paid ads, the results don't stop when you stop paying - they keep growing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What exactly is AI Optimization (AEO)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer Engine Optimization (AEO) means structuring your content, brand authority, and data so that AI tools like ChatGPT, Perplexity, and Google's AI Overviews recommend your products when users ask questions in your category. It's the fastest-growing new acquisition channel in e-commerce, and the brands that establish AI visibility now will compound that advantage for years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with brands at any stage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For CRO specifically, we recommend at least 10,000 monthly sessions to run statistically valid A/B tests. For SEO and AEO, we work with brands at any stage - building the right technical foundation early is far easier than fixing a broken structure later. Book a call and we'll tell you exactly what's right for where you are now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's your performance guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within 6 months, we guarantee a measurable improvement in your revenue per visitor from organic channels. If we haven't hit that goal, we keep working at no additional charge until we do. We put our own time on the line because we're confident enough in our process to back it up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "You mention you've built and sold e-commerce brands - how does that help me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means we understand the pressure you're under. We know what a Google algorithm update feels like when it's your own revenue on the line. We've made expensive Shopify mistakes - so we won't make them on your store. We think about your business like owners, not service providers. That's a different kind of engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work on platforms other than Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify and Shopify Plus are our primary platforms and where we do our deepest, most effective work. We can provide SEO and CRO consulting for WooCommerce and BigCommerce stores, but if you're on Shopify, you'll get the full benefit of our platform-specific expertise - which goes considerably deeper than what any generalist agency can offer."
+      }
+    }
+  ]
+};
+
+const schema = [orgSchema, orgRatingSchema, serviceSchema, faqSchema];
+---
+
+<BaseLayout
+  title="Game Seven Marketing | SEO, AI Optimization & CRO for Shopify"
+  description="Game Seven Marketing - niche experts in SEO, AI Optimization and CRO for Shopify e-commerce brands. When you need the A-team."
+  canonical="/"
+  schema={schema}
+>
+  <style>
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 3rem;
+      overflow: hidden;
+    }
+    .hero-title { font-size: clamp(2.8rem, 11vw, 7rem); margin-bottom: 1.5rem; }
+  </style>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="blob blob-brand" style="width:600px;height:600px;top:-150px;left:-220px;"></div>
+    <div class="blob blob-teal" style="width:380px;height:380px;top:280px;right:-80px;"></div>
+    <div class="container">
+      <div class="hero-badge">Shopify SEO · AI Optimization · CRO</div>
+      <h1 class="display hero-title">
+        <span class="line">Rank higher.</span>
+        <span class="line gradient-text">Get found by AI.</span>
+        <span class="line">Sell more.</span>
+      </h1>
+      <p class="hero-sub">Game Seven Marketing is a niche team of expert consultants - not a generalist agency.<br><br><span style="color: var(--text);">We do one thing:</span> grow Shopify e-commerce brands through SEO, AI Optimization, and Conversion Rate Optimization. Nothing else.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Book a Free Strategy Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#roi" class="btn-secondary">Calculate Your ROI</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years of SEO expertise</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">60+</div>
+          <div class="stat-label">Shopify stores optimized</div>
+        </div>
+        <a href="#testimonials">
+          <div class="stat-item">
+            <div class="stat-num">4.9★</div>
+            <div class="stat-label">Average client rating</div>
+          </div>
+        </a>
+      </div>
+      <div class="slogan-block">
+        <div class="slogan-text">"When you need the A-team."</div>
+        <div class="slogan-sub">Game Seven Marketing - niche experts, not generalists</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div id="logos">
+    <p class="logos-label">Driving organic growth for Shopify brands</p>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item">Shopify SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">AI Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">ChatGPT Visibility</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Technical SEO</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Conversion Rate Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Answer Engine Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">Shopify Build & Optimization</span>
+        <span class="marquee-item">⬥</span>
+        <span class="marquee-item">E-Commerce Growth</span>
+        <span class="marquee-item">⬥</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="reveal">
+          <div class="section-label">Who we are</div>
+          <h2 class="heading">We're not an agency. We're the specialists you call when an agency has let you down.</h2>
+          <p>Most agencies spread themselves thin - social, ads, email, web design, whatever you need. That's their weakness. <em>We do three things: SEO, AI Optimization, and CRO for Shopify. That's it.</em> And we're obsessive about all three.</p>
+          <p>We've built and sold e-commerce brands ourselves. We've felt the pressure of a Google algorithm update at 2am. We've made every imaginable mistake on Shopify - broken things spectacularly, fixed them, then broken them again in a different way. Those scars are what make us genuinely good at this.</p>
+          <p>We're not here to manage your account. We're here to <em>grow your business</em> - with the same urgency we'd bring if it were our own.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="founder-block">
+            <img class="founder-image" src="https://calculations.tools/jesper.webp" height="50" width="50" alt="Jesper Pallesen" />
+            <div class="founder-info">
+              <div class="founder-name-row">
+                <div class="founder-name">Jesper Pallesen</div>
+                <a href="https://www.linkedin.com/in/jesperpallesen20/" target="_blank" rel="noopener noreferrer" class="founder-linkedin" aria-label="Jesper on LinkedIn">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="founder-role">Founder · Technical SEO & AI Optimization</div>
+            </div>
+          </div>
+          <p class="founder-bio">With over 10 years specializing in technical SEO and AI Optimization for e-commerce, Jesper has seen search evolve through every major shift - from Panda to today's AI-first landscape. He's built and sold e-commerce brands, so he understands what's actually at stake. Shopify is his platform of choice, and he knows every corner of it.</p>
+          <div class="about-divider"></div>
+          <div class="about-tags">
+            <span class="about-tag">10+ Years SEO</span>
+            <span class="about-tag">Technical SEO</span>
+            <span class="about-tag">AI Optimization</span>
+            <span class="about-tag">Shopify Expert</span>
+            <span class="about-tag">Built & Sold E-Commerce Brands</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section id="pain">
+    <div class="container">
+      <div class="pain-header reveal">
+        <div class="section-label">Sound familiar?</div>
+        <h2 class="heading">Your Shopify store is leaving money on the table every single day.</h2>
+      </div>
+      <div class="pain-grid reveal">
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6" opacity="0.5"/></svg>
+          </div>
+          <h3>Buried on Google</h3>
+          <p>Your competitors own page one for every product category that matters. You're 100% dependent on paid ads because organic search isn't working - and that's a costly way to run a business.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5-4 6.5V18a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-2.5C6.5 14 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/><path d="M10 17v-2.5M14 17v-2.5" opacity="0.5"/></svg>
+          </div>
+          <h3>Invisible to AI search</h3>
+          <p>When someone asks ChatGPT or Perplexity for product recommendations in your category, your brand doesn't come up. AI search is how the next generation shops - and you're not there yet.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v4H3z"/><path d="M7 7v14M17 7v14"/><path d="M3 21h18"/><path d="M12 11v6" opacity="0.5"/><path d="M9 14l3-3 3 3" opacity="0.5"/></svg>
+          </div>
+          <h3>Traffic that doesn't convert</h3>
+          <p>You're paying for clicks that leave. Your conversion rate is below 2% and you're not sure what's killing it - the product page, the checkout, the trust signals, or all of the above.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M9 3.5A9 9 0 0 0 3 12" opacity="0.5"/></svg>
+          </div>
+          <h3>Ad spend that never pays back</h3>
+          <p>You pour budget into paid channels every month. CAC keeps rising, margins keep shrinking. There's no long-term asset being built - the moment you stop spending, the traffic disappears.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><polyline points="3 17 8 12 13 14 21 6"/><path d="M3 21h18" opacity="0.5"/><path d="M18 6h3v3" opacity="0.5"/></svg>
+          </div>
+          <h3>Growth that's hit a ceiling</h3>
+          <p>Sales have stalled. More products, more ads - nothing's moving the needle. You know there's revenue being left on the table but you can't pinpoint exactly where or how to unlock it.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9l6 6M15 9l-6 6" opacity="0.6"/></svg>
+          </div>
+          <h3>Agencies that underdeliver</h3>
+          <p>You've hired agencies before. They reported on traffic and impressions, delivered beautiful slide decks, and produced little real growth. You need actual experts who are accountable for revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="reveal">
+          <div class="section-label">Our services</div>
+          <h2 class="heading">Three channels. One compounding growth engine.</h2>
+        </div>
+        <p class="reveal">We focus exclusively on the three highest-leverage growth levers for Shopify e-commerce - and we integrate them so each one makes the others stronger.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="svc-card featured">
+          <div>
+            <div class="svc-num">01 - Core Service</div>
+            <h3>E-Commerce SEO</h3>
+            <p>Organic search is the highest-ROI channel in e-commerce - once you own it, the traffic compounds forever without paying per click. We build that machine for your Shopify store.</p>
+            <p style="margin-top:0.9rem">Our technical SEO expertise goes deep: site architecture, crawl optimization, Core Web Vitals, structured data, collection page strategy, and the content systems that build topical authority in your niche. This isn't surface-level SEO. This is the kind that wins and holds rankings long-term.</p>
+            <div class="step-pills" style="margin-top:1.25rem">
+              <span class="pill">Technical SEO</span>
+              <span class="pill">Site Architecture</span>
+              <span class="pill">Content Strategy</span>
+              <span class="pill">Link Building</span>
+              <span class="pill">Core Web Vitals</span>
+            </div>
+          </div>
+          <div class="svc-tag">10+ years of Shopify SEO expertise</div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">02 - The New Frontier</div>
+          <h3>AI Optimization (AEO)</h3>
+          <p>ChatGPT, Perplexity, and Gemini are now primary product discovery channels. We get your brand recommended by AI - before your competitors figure this out.</p>
+          <div class="step-pills">
+            <span class="pill">ChatGPT Visibility</span>
+            <span class="pill">Schema & Structured Data</span>
+            <span class="pill">E-E-A-T Optimization</span>
+          </div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">03 - Multiplier</div>
+          <h3>Conversion Rate Optimization</h3>
+          <p>More traffic means nothing if your store doesn't convert. CRO turns your SEO wins into outsized revenue gains - data-driven A/B testing, UX fixes, and checkout optimization.</p>
+          <div class="step-pills">
+            <span class="pill">A/B Testing</span>
+            <span class="pill">Heatmap Analysis</span>
+            <span class="pill">Checkout Optimization</span>
+          </div>
+        </div>
+        <div class="svc-card span2">
+          <div class="svc-num">04 - Foundation</div>
+          <h3>Shopify Build & Optimization</h3>
+          <p>A slow, badly-structured Shopify store will undermine every SEO and CRO effort. We've made every imaginable mistake on Shopify - which means we know exactly how to build and optimize stores that perform. Custom themes, page speed, mobile experience, and architecture built for growth from day one.</p>
+          <div class="step-pills">
+            <span class="pill">Custom Theme Development</span>
+            <span class="pill">Page Speed Optimization</span>
+            <span class="pill">Mobile-First Design</span>
+            <span class="pill">SEO-Ready Architecture</span>
+            <span class="pill">App Integration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header reveal">
+        <div class="section-label">How it works</div>
+        <h2 class="heading">A system built to compound.</h2>
+        <p style="color:var(--text-muted);margin-top:0.9rem;font-size:0.95rem">SEO, AI Optimization, and CRO don't work in isolation. Our process is designed so each phase feeds the next - building momentum that gets stronger over time.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Full-Spectrum Audit</h3>
+            <p>We start with a complete diagnostic of your Shopify store - technical SEO, site architecture, keyword gap analysis, AI visibility audit, Core Web Vitals, and conversion funnel review. We identify exactly where you're losing organic traffic, why AI tools aren't mentioning you, and where visitors are dropping off. Nothing gets missed.</p>
+            <div class="step-pills">
+              <span class="pill">Technical SEO Audit</span>
+              <span class="pill">Keyword Gap Analysis</span>
+              <span class="pill">AI Visibility Check</span>
+              <span class="pill">CRO Heuristic Review</span>
+              <span class="pill">Competitor Research</span>
+            </div>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Prioritized Growth Roadmap</h3>
+            <p>You get a clear, ranked plan - every opportunity sorted by revenue impact vs. effort. Technical fixes that are actively blocking rankings go first. Quick-win content targets follow. A/B tests are queued based on highest conversion potential. You always know exactly what we're working on and why, with transparent reporting tied to real business metrics.</p>
+            <div class="step-pills">
+              <span class="pill">90-Day Roadmap</span>
+              <span class="pill">Content Calendar</span>
+              <span class="pill">Test Hypotheses</span>
+              <span class="pill">Technical Fix Queue</span>
+            </div>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Execute & Compound</h3>
+            <p>We build, publish, test, and measure. SEO content compounds monthly - each piece builds topical authority and attracts more organic traffic. AI Optimization work positions your brand in AI model responses. CRO testing turns every traffic gain into amplified revenue. The three channels reinforce each other, creating growth that accelerates over time.</p>
+            <div class="step-pills">
+              <span class="pill">Content Publishing</span>
+              <span class="pill">A/B Testing</span>
+              <span class="pill">Link Acquisition</span>
+              <span class="pill">Monthly Strategy Calls</span>
+              <span class="pill">Live Reporting Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section id="compare">
+    <div class="container">
+      <div class="compare-header reveal">
+        <div class="section-label">Why us</div>
+        <h2 class="heading">Them vs. us.</h2>
+        <p>Generalist agencies don't have the depth to do what we do. Here's what makes the difference.</p>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-col">
+          <div class="compare-col-title">Generic Marketing Agencies</div>
+          <ul class="compare-list">
+            <li><span class="ci no">✕</span>Try to do everything - social, ads, email, SEO, design</li>
+            <li><span class="ci no">✕</span>No real Shopify specialization or deep platform knowledge</li>
+            <li><span class="ci no">✕</span>SEO is an afterthought, not a core competency</li>
+            <li><span class="ci no">✕</span>Zero understanding of AI search - haven't caught up yet</li>
+            <li><span class="ci no">✕</span>Report on traffic and impressions, not revenue</li>
+            <li><span class="ci no">✕</span>Junior staff on your account, senior staff on the pitch</li>
+            <li><span class="ci no">✕</span>No skin in the game - paid monthly regardless of results</li>
+          </ul>
+        </div>
+        <div class="compare-col us">
+          <div class="compare-col-title">Game Seven Marketing</div>
+          <ul class="compare-list">
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Exclusively SEO, AEO and CRO - nothing else, ever</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Shopify is our full-time obsession - we've built and sold brands on it</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>10+ years of technical SEO expertise, led by our founder</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Built for AI-first search - early movers in AEO for e-commerce</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Every metric tied to revenue - that's the only number that matters</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Senior consultants on every account - no handoffs, no juniors</li>
+            <li><span class="ci yes"><svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg></span>Guaranteed results or we keep working until we deliver</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATORS -->
+  <section id="roi">
+    <div class="container">
+      <div class="roi-header reveal">
+        <div class="section-label">Calculate your upside</div>
+        <h2 class="heading">See what the numbers look like for your store.</h2>
+        <p>Use the calculators below to estimate the revenue impact of SEO, AI Optimization, and CRO for your specific situation. Conservative estimates based on real client results.</p>
+      </div>
+      <div class="calc-wrapper reveal">
+        <div class="calc-tabs">
+          <button class="calc-tab active" onclick="switchCalc('seo', this)">
+            <svg viewBox="0 0 24 24"><polyline points="3 17 8 12 13 15 21 5"/><path d="M19 5h2v2"/></svg>
+            SEO Revenue
+          </button>
+          <button class="calc-tab" onclick="switchCalc('aeo', this)">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M6 21v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><path d="M18 9l2 2-2 2" opacity="0.6"/></svg>
+            AI Optimization
+          </button>
+          <button class="calc-tab" onclick="switchCalc('cro', this)">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            CRO Uplift
+          </button>
+        </div>
+
+        <!-- SEO Calculator -->
+        <div id="calc-seo" class="calc-panel active">
+          <div class="calc-intro">
+            <h3>What is organic search worth to your store?</h3>
+            <p>Most e-commerce brands pay $1.50–$4.00 per click in paid ads. SEO delivers the same clicks - permanently - at a fraction of the cost. Enter your current situation and see the impact of ranking for your target keywords.</p>
+            <p class="calc-disclaimer">Estimates assume a 6–12 month ramp to target traffic levels, which is typical for our clients.</p>
+          </div>
+          <div class="calc-box">
+            <div class="roi-field">
+              <label>Current monthly organic sessions</label>
+              <input type="number" id="seo-current" value="2000" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Target monthly organic sessions (after SEO)</label>
+              <input type="number" id="seo-target" value="8000" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Store conversion rate (%)</label>
+              <input type="number" id="seo-cvr" value="2.2" step="0.1" inputmode="decimal" />
+            </div>
+            <div class="roi-field">
+              <label>Average order value ($)</label>
+              <input type="number" id="seo-aov" value="85" inputmode="numeric" />
+            </div>
+            <div class="roi-result">
+              <div class="result-label">Additional annual revenue from SEO</div>
+              <div class="result-num" id="seoResult">-</div>
+              <div class="result-sub" id="seoSub"></div>
+            </div>
+            <div class="roi-result-row">
+              <div class="roi-mini-stat">
+                <div class="mval" id="seoOrders">-</div>
+                <div class="mlabel">Extra orders/month</div>
+              </div>
+              <div class="roi-mini-stat">
+                <div class="mval" id="seoCPC">-</div>
+                <div class="mlabel">Equivalent ad spend saved/yr</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Unlock this organic traffic &rarr;</a>
+          </div>
+        </div>
+
+        <!-- AEO Calculator -->
+        <div id="calc-aeo" class="calc-panel">
+          <div class="calc-intro">
+            <h3>How much revenue is AI search leaving on the table?</h3>
+            <p>AI tools like ChatGPT and Perplexity handle millions of product discovery queries every day. Brands that appear in AI responses get warm, high-intent referral traffic - buyers who are already sold on the category and looking for a recommendation.</p>
+            <p class="calc-disclaimer">AI search traffic is growing rapidly. Early movers in AEO will compound this advantage for years.</p>
+          </div>
+          <div class="calc-box">
+            <div class="roi-field">
+              <label>Monthly AI search queries in your category (estimate)</label>
+              <input type="number" id="aeo-queries" value="50000" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Current AI visibility - % of queries that mention you</label>
+              <input type="range" id="aeo-current-vis" min="0" max="20" value="0" step="1" oninput="calcAEO()" />
+              <div class="range-labels"><span>0%</span><span id="aeo-vis-label" style="color:var(--brand);font-weight:600">0%</span><span>20%</span></div>
+            </div>
+            <div class="roi-field">
+              <label>Target AI visibility after optimization</label>
+              <div class="roi-select-group">
+                <button onclick="setAEOTarget(0.03, this)">3%</button>
+                <button onclick="setAEOTarget(0.06, this)" class="active">6%</button>
+                <button onclick="setAEOTarget(0.10, this)">10%</button>
+              </div>
+            </div>
+            <div class="roi-field">
+              <label>Average order value ($)</label>
+              <input type="number" id="aeo-aov" value="85" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Store conversion rate (%)</label>
+              <input type="number" id="aeo-cvr" value="2.5" step="0.1" inputmode="decimal" />
+            </div>
+            <div class="roi-result">
+              <div class="result-label">Additional annual revenue from AI visibility</div>
+              <div class="result-num" id="aeoResult">-</div>
+              <div class="result-sub" id="aeoSub"></div>
+            </div>
+            <div class="roi-result-row">
+              <div class="roi-mini-stat">
+                <div class="mval" id="aeoSessions">-</div>
+                <div class="mlabel">New sessions/month from AI</div>
+              </div>
+              <div class="roi-mini-stat">
+                <div class="mval" id="aeoOrders">-</div>
+                <div class="mlabel">Extra orders/month</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Get your brand into AI results &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CRO Calculator -->
+        <div id="calc-cro" class="calc-panel">
+          <div class="calc-intro">
+            <h3>What would a higher conversion rate mean in dollars?</h3>
+            <p>Most Shopify stores convert between 1–2%. The top performers hit 4–6%. CRO closes that gap - turning existing traffic into more revenue without spending a cent more on ads.</p>
+            <p>When you combine CRO wins with SEO growth, the multiplier effect is where the real magic happens.</p>
+            <p class="calc-disclaimer">Most clients see a 10–25% uplift in conversion rate within the first 90 days.</p>
+          </div>
+          <div class="calc-box">
+            <div class="roi-field">
+              <label>Average order value ($)</label>
+              <input type="number" id="cro-aov" value="85" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Monthly orders</label>
+              <input type="number" id="cro-orders" value="500" inputmode="numeric" />
+            </div>
+            <div class="roi-field">
+              <label>Expected conversion rate uplift</label>
+              <div class="roi-select-group">
+                <button onclick="setCROUplift(0.10, this)">10%</button>
+                <button onclick="setCROUplift(0.15, this)" class="active">15%</button>
+                <button onclick="setCROUplift(0.25, this)">25%</button>
+              </div>
+            </div>
+            <div class="roi-result">
+              <div class="result-label">Additional annual revenue from CRO</div>
+              <div class="result-num" id="croResult">-</div>
+              <div class="result-sub" id="croSub"></div>
+            </div>
+            <div class="roi-result-row">
+              <div class="roi-mini-stat">
+                <div class="mval" id="croExtraOrders">-</div>
+                <div class="mlabel">Extra orders/month</div>
+              </div>
+              <div class="roi-mini-stat">
+                <div class="mval" id="croMonthly">-</div>
+                <div class="mlabel">Extra revenue/month</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.4rem">Unlock this revenue &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <div class="section-label">Client results</div>
+        <h2 class="heading">What our clients say.</h2>
+      </div>
+      <div class="testimonials-scroll reveal">
+        {testimonials.slice(0, 6).map((t) => (
+          <div class="testi-card">
+            <div class="testi-stars">
+              {Array.from({ length: t.rating }).map(() => (
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              ))}
+            </div>
+            <p class="testi-quote">"{t.quote}"</p>
+            <div class="testi-author"><div class="testi-avatar">{t.name[0]}</div><div><div class="testi-name">{t.name}</div><div class="testi-role">{t.role}</div></div></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="reveal">
+          <div class="section-label">Got questions?</div>
+          <h2 class="heading">Frequently asked.</h2>
+          <p style="color:var(--text-muted);margin-top:1rem">Everything you need to know before we talk.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              How long does SEO take to show results?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Technical SEO fixes can show ranking improvements within weeks. Content and authority-building typically compounds over 3&ndash;6 months, after which it accelerates significantly. Most clients see meaningful organic traffic increases within 90 days and substantial revenue impact by month 4&ndash;6. Unlike paid ads, the results don't stop when you stop paying - they keep growing.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              What exactly is AI Optimization (AEO)?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Answer Engine Optimization (AEO) means structuring your content, brand authority, and data so that AI tools like ChatGPT, Perplexity, and Google's AI Overviews recommend your products when users ask questions in your category. It's the fastest-growing new acquisition channel in e-commerce, and the brands that establish AI visibility now will compound that advantage for years.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Do you work with brands at any stage?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>For CRO specifically, we recommend at least 10,000 monthly sessions to run statistically valid A/B tests. For SEO and AEO, we work with brands at any stage - building the right technical foundation early is far easier than fixing a broken structure later. Book a call and we'll tell you exactly what's right for where you are now.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              What's your performance guarantee?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Within 6 months, we guarantee a measurable improvement in your revenue per visitor from organic channels. If we haven't hit that goal, we keep working at no additional charge until we do. We put our own time on the line because we're confident enough in our process to back it up.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              You've built and sold e-commerce brands - how does that help me?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>It means we understand the pressure you're under. We know what a Google algorithm update feels like when it's your own revenue on the line. We've made expensive Shopify mistakes - so we won't make them on your store. We think about your business like owners, not service providers. That's a different kind of engagement.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              Do you work on platforms other than Shopify?
+              <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </div>
+            <div class="faq-a"><p>Shopify and Shopify Plus are our primary platforms and where we do our deepest, most effective work. We can provide SEO and CRO consulting for WooCommerce and BigCommerce stores, but if you're on Shopify, you'll get the full benefit of our platform-specific expertise - which goes considerably deeper than what any generalist agency can offer.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="blob blob-brand" style="width:550px;height:550px;bottom:-180px;left:50%;transform:translateX(-50%);opacity:0.09;"></div>
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label">Book a free call</div>
+        <h2 class="display">Ready to win<br> <span class="line gradient-text">your game 7?</span></h2>
+        <p>Book a free 30-minute strategy session. We'll audit your store's SEO and AI visibility, identify the highest-impact opportunities, and give you a clear picture of what's possible - with no pitch and no pressure.</p>
+        <form action="https://formspree.io/f/xqabvnab" method="POST">
+          <input type="text" name="name" class="contact-email" placeholder="Your name" required />
+          <input type="email" name="email" class="contact-email" placeholder="Your email address" required />
+          <div style="text-align:center;margin-top:1rem">
+            <button type="submit" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;border:none;cursor:pointer;">Schedule My Free Strategy Call &rarr;</button>
+          </div>
+        </form>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1.4rem">You run a Shopify store. You're serious about growing it. That's all we need.</p>
+        <div class="cta-microstats">
+          <div><div class="cta-ms-num">Free</div><div class="cta-ms-label">30-min strategy call</div></div>
+          <div><div class="cta-ms-num">6-Month</div><div class="cta-ms-label">Revenue guarantee</div></div>
+          <div><div class="cta-ms-num">10+ Years</div><div class="cta-ms-label">SEO expertise</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/home.js" defer></script>
+</BaseLayout>

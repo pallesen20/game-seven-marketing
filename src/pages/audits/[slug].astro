@@ -1,0 +1,311 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import TestimonialMarquee from '../../components/TestimonialMarquee.astro';
+import { audits, type Audit } from '../../data/audits';
+
+export function getStaticPaths() {
+  return audits.map((audit) => ({
+    params: { slug: audit.slug },
+    props: { audit },
+  }));
+}
+
+interface Props {
+  audit: Audit;
+}
+
+const { audit } = Astro.props;
+
+const relatedAudits = audits.filter((a) => a.slug !== audit.slug).slice(0, 3);
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: audit.name,
+  description: audit.description,
+  provider: {
+    '@type': 'Organization',
+    name: 'Game Seven Marketing',
+    url: 'https://gamesevenmarketing.com',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: audit.price,
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: audit.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title={audit.metaTitle}
+  description={audit.description}
+  canonical={`/audits/${audit.slug}`}
+  schema={[serviceSchema, faqSchema]}
+>
+  <style>
+    #hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 120px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-title { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 1.25rem; }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; animation: fadeIn 1s 0.4s forwards; opacity: 0; line-height: 1.7; }
+
+    .slug-price-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .slug-price { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--brand); line-height: 1; }
+    .slug-price-meta { display: flex; flex-direction: column; gap: 0.25rem; }
+    .slug-price-billing { font-size: 0.82rem; color: var(--text-muted); }
+    .slug-price-delivery { font-size: 0.78rem; color: var(--brand); }
+
+    /* What's included */
+    #includes { border-bottom: 1px solid var(--border); }
+    .includes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .includes-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; }
+    .includes-card h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1.5rem; }
+    .includes-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+    .includes-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+    .check { width: 15px; height: 15px; color: var(--brand); flex-shrink: 0; margin-top: 2px; }
+
+    .cta-card { background: var(--bg-card2); border: 1px solid rgba(0,232,122,0.3); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .cta-card-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); margin-bottom: 1rem; }
+    .cta-card h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
+    .cta-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 2rem; }
+    .cta-card .slug-price { font-size: 2rem; margin-bottom: 0.25rem; }
+    .cta-card .btn-primary { justify-content: center; }
+
+    /* How it works */
+    #how { border-bottom: 1px solid var(--border); }
+    .how-header { max-width: 600px; margin-bottom: 4rem; }
+    .how-header h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1rem; }
+    .how-header p { color: var(--text-muted); }
+    .how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; }
+    .how-step { background: var(--bg-card); padding: 2.5rem; }
+    .how-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--text-dim); line-height: 1; margin-bottom: 1.25rem; }
+    .how-step h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .how-step p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* FAQ */
+    #faq { border-bottom: 1px solid var(--border); }
+    .faq-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
+    .faq-left h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1rem; }
+    .faq-left p { color: var(--text-muted); }
+
+    /* Related audits */
+    #related { border-bottom: 1px solid var(--border); }
+    .related-header { margin-bottom: 3rem; }
+    .related-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.75rem; }
+    .related-header p { color: var(--text-muted); }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; transition: border-color 0.3s, background 0.3s; }
+    .related-card:hover { background: var(--bg-card2); border-color: var(--border-hover); }
+    .related-badge { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); margin-bottom: 1rem; }
+    .related-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .related-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-bottom: auto; padding-bottom: 1.5rem; }
+    .related-price { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; }
+    .related-card .btn-secondary { font-size: 0.85rem; padding: 0.65rem 1.25rem; min-height: auto; }
+
+    /* Final CTA */
+    #final-cta { background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,232,122,0.06), transparent); }
+    .final-cta-inner { text-align: center; max-width: 680px; margin: 0 auto; }
+    .final-cta-inner h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.25rem; }
+    .final-cta-inner p { color: var(--text-muted); margin-bottom: 2.5rem; }
+    .final-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 960px) {
+      .includes-grid { grid-template-columns: 1fr; }
+      .includes-card,
+      .cta-card { padding: 1.5rem; }
+      .how-steps { grid-template-columns: 1fr; }
+      .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .related-grid { grid-template-columns: 1fr; max-width: 420px; }
+    }
+    @media (max-width: 600px) {
+      .includes-card,
+      .cta-card { padding: 1.25rem; }
+    }
+  </style>
+
+  <section id="hero">
+    <div class="blob blob-brand" style="width:500px;height:500px;top:-150px;left:-200px;"></div>
+    <div class="blob blob-blue" style="width:350px;height:350px;top:100px;right:-100px;"></div>
+    <div class="game7-stamp" aria-hidden="true">
+      <span class="game7-stamp-line">Game&nbsp;7</span>
+      <span class="game7-stamp-divider"></span>
+      <span class="game7-stamp-line">Audits</span>
+    </div>
+    <div class="container">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Audits', href: '/audits' },
+        { label: audit.name, href: `/audits/${audit.slug}` },
+      ]} />
+      <div class="hero-badge">{audit.badge}</div>
+      <h1 class="display hero-title">{audit.heroHeadline}</h1>
+      <p class="hero-sub">{audit.heroSub}</p>
+      <div class="slug-price-row">
+        <div class="slug-price">{audit.currency}{audit.price}</div>
+        <div class="slug-price-meta">
+          <span class="slug-price-billing">{audit.billing}</span>
+          <span class="slug-price-delivery">{audit.delivery}</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href={audit.stripeUrl} target="_blank" rel="noopener" class="btn-primary">Get the {audit.name} &rarr;</a>
+        <a href="/audits" class="btn-secondary">View all audits</a>
+      </div>
+    </div>
+  </section>
+  <section id="includes">
+    <div class="container">
+      <div class="includes-grid reveal">
+        <div class="includes-card">
+          <h2>What's included</h2>
+          <ul class="includes-list">
+            {audit.bullets.map((bullet) => (
+              <li>
+                <svg class="check" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" viewBox="3 5 18 13"><path d="M20 6 9 17l-5-5"></path></svg>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="cta-card">
+          <div>
+            <div class="cta-card-label">Get started today</div>
+            <h3>Ready for expert analysis of your site?</h3>
+            <p>Purchase securely via Stripe. Submit your URL after checkout. Your report lands in your inbox within 1 business day.</p>
+          </div>
+          <div>
+            <div class="slug-price" style="font-size:2rem;margin-bottom:0.25rem">{audit.currency}{audit.price}</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1.5rem">{audit.billing} &middot; {audit.delivery}</div>
+            <a href={audit.stripeUrl} target="_blank" rel="noopener" class="btn-primary" style="justify-content:center;width:100%">
+              Get the {audit.name} &rarr;
+            </a>
+            <div class="stripe-trust">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Secure checkout with Stripe
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="creator-quote-card" style="margin-top:1.5rem;">
+          <div class="creator-quote-mark">&ldquo;</div>
+          <p class="creator-quote-text">These audits are the most precise and in-depth I have ever experienced. They genuinely uncover more fixes than I even catch myself on a first pass.</p>
+          <div class="founder-block">
+            <img class="founder-image" src="https://calculations.tools/jesper.webp" alt="Jesper Pallesen" />
+            <div>
+              <div class="founder-name">Jesper Pallesen</div>
+              <div class="founder-role">Founder, Game Seven Marketing</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <TestimonialMarquee />
+  <section id="how">
+    <div class="container">
+      <div class="how-header reveal">
+        <div class="section-label">How it works</div>
+        <h2>Simple, fast, no calls required.</h2>
+        <p>The entire process is asynchronous. You don't need to schedule anything or wait for a discovery call.</p>
+      </div>
+      <div class="how-steps reveal">
+        <div class="how-step">
+          <div class="how-num">01</div>
+          <h3>Purchase and submit your URL</h3>
+          <p>Complete your purchase via Stripe. You'll be asked for your website URL immediately after checkout. That's all we need to get started.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">02</div>
+          <h3>We conduct the analysis</h3>
+          <p>A senior consultant reviews your site manually. We use tools to assist - but every finding is assessed in context and every recommendation is written by a human who knows what they're looking at.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">03</div>
+          <h3>Report delivered to your inbox</h3>
+          <p>Within 1 day, you receive a clear, structured report with every finding ranked by priority and every recommendation written to be acted on immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="reveal">
+          <div class="section-label">Questions</div>
+          <h2 class="heading">About this audit.</h2>
+          <p style="color:var(--text-muted);margin-top:1rem">Common questions about the {audit.name}.</p>
+        </div>
+        <div class="faq-list reveal">
+          {audit.faq.map((item, i) => (
+            <div class={`faq-item${i === 0 ? ' open' : ''}`}>
+              <div class="faq-q" onclick="toggleFaq(this)">
+                {item.q}
+                <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </div>
+              <div class="faq-a"><p>{item.a}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="related">
+    <div class="container">
+      <div class="related-header reveal">
+        <div class="section-label">Other audits</div>
+        <h2>Related audit services</h2>
+        <p>Every SEO dimension covered. Choose the audit that fits your current priority.</p>
+      </div>
+      <div class="related-grid reveal">
+        {relatedAudits.map((related) => (
+          <div class="related-card">
+            <div class="related-badge">{related.badge}</div>
+            <h3>{related.name}</h3>
+            <p>{related.tagline}</p>
+            <div class="related-price">{related.currency}{related.price}</div>
+            <a href={`/audits/${related.slug}`} class="btn-secondary">View details &rarr;</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="final-cta">
+    <div class="container">
+      <div class="final-cta-inner reveal">
+        <div class="section-label">Ready to get started?</div>
+        <h2>Get your {audit.name} today.</h2>
+        <p>Expert analysis. Delivered in 1 business day. Every fix ranked by revenue impact.</p>
+        <div class="final-cta-actions">
+          <a href={audit.stripeUrl} target="_blank" rel="noopener" class="btn-primary">Get the {audit.name} &mdash; {audit.currency}{audit.price} &rarr;</a>
+          <a href="/audits" class="btn-secondary">Browse all audits</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import { testimonials } from '../data/testimonials';
+
+const starSvg = `<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+---
+
+<section class="testi-marquee-section">
+  <div class="container">
+    <div class="testi-marquee-header reveal">
+      <div class="section-label">Client results</div>
+      <p>Trusted by brands and businesses across Europe and the US</p>
+    </div>
+  </div>
+  <div class="testi-marquee-wrap">
+    <div class="testi-track" id="testi-track">
+      {testimonials.map((t) => (
+        <div class="testi-card">
+          <div class="testi-stars" set:html={starSvg.repeat(t.rating)} />
+          <p class="testi-quote">"{t.quote}"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">{t.name[0]}</div>
+            <div><div class="testi-name">{t.name}</div><div class="testi-role">{t.role}</div></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function() {
+    var track = document.getElementById('testi-track');
+    if (!track) return;
+    track.innerHTML += track.innerHTML;
+    var half = track.scrollWidth / 2;
+    track.style.setProperty('--testi-distance', '-' + half + 'px');
+  })();
+</script>
