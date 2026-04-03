@@ -38,10 +38,10 @@ export const audits: Audit[] = [
     ],
     stripeUrl: 'https://buy.stripe.com/14A6oI7YYbX13qwgh2fnO0b',
     featured: true,
-    metaTitle: 'Full Site SEO Audit €299 | Game Seven Marketing',
+    metaTitle: 'Full Site Audit for SEO & AEO | AI Search Audit for just €299',
     description: 'Comprehensive expert SEO audit covering technical, content, AI search, schema, and site architecture. 15+ prioritized fixes delivered within 1 business day.',
-    heroHeadline: 'The most thorough SEO audit your website has ever had.',
-    heroSub: 'We crawl every corner of your site - technical SEO, content quality, AI search visibility, schema, and architecture - and deliver a prioritized action plan that maps every fix to revenue impact.',
+    heroHeadline: 'Full Site Audit for SEO & AEO',
+    heroSub: 'The most thorough SEO audit your website has ever had. We crawl every corner of your site - technical SEO, content quality, AI search visibility, schema, and architecture - and deliver a prioritized action plan that maps every fix to revenue impact.',
     faq: [
       {
         q: 'What pages does the Full Site Audit cover?',
@@ -68,7 +68,7 @@ export const audits: Audit[] = [
   {
     slug: 'single-page',
     name: 'Single Page Audit',
-    badge: 'Single Page',
+    badge: 'Single Page Audit',
     tagline: 'Pick any page. Get a complete expert breakdown of exactly what\'s holding it back.',
     price: 49,
     currency: '€',
@@ -101,7 +101,7 @@ export const audits: Audit[] = [
         a: 'Yes. We check whether the submitted URL\'s content is being surfaced or cited in ChatGPT, Perplexity, and Google AI Overviews for relevant queries. If it is not, we identify the specific citability gaps holding it back.',
       },
       {
-        q: 'How is this different from a free automated tool like Screaming Frog or Semrush?',
+        q: 'How is this different from an automated tool like Screaming Frog or Semrush?',
         a: 'Automated tools flag issues mechanically without understanding your business context. A senior consultant looks at your page, understands your target keyword intent, assesses whether your content is actually competitive, and prioritizes fixes by revenue impact - not just technical severity. The difference shows up in what actually moves rankings.',
       },
     ],
@@ -125,8 +125,8 @@ export const audits: Audit[] = [
     stripeUrl: 'https://buy.stripe.com/6oUfZi2EEe59bX20i4fnO0c',
     metaTitle: 'Content & E-E-A-T SEO Audit €99 | Game Seven Marketing',
     description: 'Expert E-E-A-T and content audit. We assess thin content, AI citation readiness, readability, and authority signals - with specific rewrite recommendations delivered in 1 day.',
-    heroHeadline: 'Is your content actually credible to Google and AI?',
-    heroSub: 'Google\'s E-E-A-T framework and AI citation systems judge your content by the same standards: expertise, authority, and trustworthiness. This audit shows exactly where your content falls short - and gives you the specific rewrites to fix it.',
+    heroHeadline: 'Content & E-E-A-T Site Audit',
+    heroSub: 'Is your content actually credible to Google and AI? Google\'s E-E-A-T framework and AI citation systems judge your content by the same standards: experience, expertise, authority, and trustworthiness. This audit shows exactly where your content falls short - and gives you the specific rewrites to fix it.',
     faq: [
       {
         q: 'What is E-E-A-T and why does it matter for my rankings?',
@@ -169,8 +169,8 @@ export const audits: Audit[] = [
     stripeUrl: 'https://buy.stripe.com/14AbJ2cfe1in4uAe8UfnO0a',
     metaTitle: 'Schema & Structured Data Audit €99 | Game Seven Marketing',
     description: 'Expert JSON-LD audit across all page types. Validates Product, Review, and Organization schema, checks rich results eligibility, and delivers corrected code snippets ready to deploy.',
-    heroHeadline: 'Structured data done wrong costs you rankings and AI visibility.',
-    heroSub: 'Schema errors silently block rich results, suppress product star ratings, and make your content invisible to AI citation systems. This audit finds every issue and delivers corrected JSON-LD code ready to implement today.',
+    heroHeadline: 'Structured Data & Schema Markup Audit',
+    heroSub: 'Structured data done wrong costs you rankings and AI visibility. Schema errors silently block rich results, suppress product star ratings, and make your content invisible to AI citation systems. This audit finds every issue and delivers corrected JSON-LD code ready to implement today.',
     faq: [
       {
         q: 'Which schema types do you audit?',
@@ -210,8 +210,8 @@ export const audits: Audit[] = [
     stripeUrl: 'https://buy.stripe.com/aFacN67YYaSX9OU3ugfnO09',
     metaTitle: 'Technical SEO Audit €149 | Game Seven Marketing',
     description: 'Expert technical SEO audit: crawlability, Core Web Vitals, mobile, URL structure, redirects, and HTTPS signals. Every fix ranked by revenue impact, delivered in 1 business day.',
-    heroHeadline: 'Technical SEO issues are silent ranking killers.',
-    heroSub: 'Crawl errors, slow Core Web Vitals, broken redirects, and indexation problems can cost you rankings without any visible warning. This audit finds them all - and tells you exactly which ones to fix first for maximum revenue impact.',
+    heroHeadline: 'Complete Technical SEO Audit',
+    heroSub: 'Technical SEO issues are silent ranking killers. Crawl errors, slow Core Web Vitals, broken redirects, and indexation problems can cost you rankings without any visible warning. This audit finds them all - and tells you exactly which ones to fix first for maximum revenue impact.',
     faq: [
       {
         q: 'What does a technical SEO audit cover that tools like Screaming Frog miss?',
@@ -238,7 +238,7 @@ export const audits: Audit[] = [
   {
     slug: 'ai-search-geo',
     name: 'AI Search / GEO Audit',
-    badge: 'AI Search',
+    badge: 'AI Search Audit',
     tagline: 'See exactly how visible your brand is in ChatGPT, Perplexity, and Google AI Overviews - and fix it.',
     price: 149,
     currency: '€',
@@ -252,9 +252,9 @@ export const audits: Audit[] = [
       'Platform-specific optimisation - ChatGPT, Perplexity, AI Overviews',
     ],
     stripeUrl: 'https://buy.stripe.com/eVq9AU4MMd156CI7KwfnO08',
-    metaTitle: 'AI Search / GEO Audit €149 | Game Seven Marketing',
+    metaTitle: 'Expert AI Search Audit just €149 | AEO/GEO Visibility Report',
     description: 'Expert AI search visibility audit for ChatGPT, Perplexity, and Google AI Overviews. Checks crawler access, brand citation signals, llms.txt, and passage citability - delivered in 1 day.',
-    heroHeadline: 'Is your brand invisible to AI search?',
+    heroHeadline: 'AI Search Audit - Is Your Brand Invisible to AI?',
     heroSub: 'ChatGPT, Perplexity, and Google AI Overviews now drive significant product discovery traffic. This audit shows exactly how visible your brand is across all three platforms - and delivers a specific action plan to become the recommended source in your category.',
     faq: [
       {
