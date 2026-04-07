@@ -38,7 +38,7 @@ function runAnalysis() {
   box.innerHTML = '<div class="analyzer-loading">Analyzing your page<span class="analyzer-loading-dots"><span></span><span></span><span></span></span></div>';
 
   var apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=' +
-    encodeURIComponent(url) + '&strategy=mobile&category=seo&category=performance&key=' + PSI_KEY;
+    encodeURIComponent(url) + '&strategy=mobile&category=seo&category=accessibility&category=performance&key=' + PSI_KEY;
 
   fetch(apiUrl)
     .then(function (r) { return r.json(); })
