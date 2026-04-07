@@ -56,7 +56,8 @@ function runAnalysis() {
       console.log('PSI raw response:', JSON.stringify({
         runtimeError: lhr.runtimeError,
         seoScore: lhr.categories && lhr.categories.seo && lhr.categories.seo.score,
-        perfScore: lhr.categories && lhr.categories.performance && lhr.categories.performance.score
+        perfScore: lhr.categories && lhr.categories.performance && lhr.categories.performance.score,
+        accScore: lhr.categories && lhr.categories.accessibility && lhr.categories.accessibility.score
       }));
       renderResults(data, url);
     })
