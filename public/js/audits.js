@@ -82,6 +82,7 @@ function renderResults(data, url) {
 
   var rawSeo  = cats.seo  && cats.seo.score  !== null && cats.seo.score  !== undefined ? cats.seo.score  : null;
   var rawPerf = cats.performance && cats.performance.score !== null && cats.performance.score !== undefined ? cats.performance.score : null;
+  var rawAcc = cats.accessibility && cats.accessibility.score !== null && cats.accessibility.score !== undefined ? cats.accessibility.score : null;
 
   if (rawSeo === null && rawPerf === null) {
     box.innerHTML = '<div class="analyzer-error">Google returned no scores for this page. Check the browser console (F12) for the raw PSI response, then try a different URL. Or <a href="#pricing" style="color:var(--brand)">browse our expert audits</a> instead.</div>';
@@ -90,7 +91,8 @@ function renderResults(data, url) {
 
   var seo   = rawSeo  !== null ? Math.round(rawSeo  * 100) : null;
   var perf  = rawPerf !== null ? Math.round(rawPerf * 100) : null;
-  var valid = [seo, perf].filter(function (v) { return v !== null; });
+  var access  = rawAcc !== null ? Math.round(rawAcc * 100) : null;
+  var valid = [seo, perf, access].filter(function (v) { return v !== null; });
   var score = Math.round(valid.reduce(function (a, b) { return a + b; }, 0) / valid.length);
 
   var color = score >= 90 ? '#00e87a' : score >= 50 ? '#f5a623' : '#ff4d4d';
@@ -148,6 +150,10 @@ function renderResults(data, url) {
   if (perf !== null) {
     var perfCol = perf >= 90 ? '#00e87a' : perf >= 50 ? '#f5a623' : '#ff4d4d';
     scoreRow += '<div class="analyzer-sub-score"><span style="font-family:\'Syne\',sans-serif;font-size:1.4rem;font-weight:600;color:' + perfCol + '">' + perf + '</span><span style="font-size:0.75rem;color:#7a8394;margin-left:4px">Performance</span></div>';
+  }
+  if (access !== null) {
+    var accCol = access >= 90 ? '#00e87a' : access >= 50 ? '#f5a623' : '#ff4d4d';
+    scoreRow += '<div class="analyzer-sub-score"><span style="font-family:\'Syne\',sans-serif;font-size:1.4rem;font-weight:600;color:' + accCol + '">' + access + '</span><span style="font-size:0.75rem;color:#7a8394;margin-left:4px">Accessibility</span></div>';
   }
 
   var display = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
