@@ -720,7 +720,14 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
     .creator-quote-card { background: rgba(0,232,122,0.04); border: 1px solid rgba(0,232,122,0.2); border-radius: 24px; padding: 2rem; display: flex; flex-direction: column; }
     .creator-quote-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); margin-bottom: 2rem; }
     .creator-quote-mark { font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; color: var(--brand); opacity: 0.35; line-height: 0.8; margin-bottom: 1.25rem; }
-    .creator-quote-text { font-size: 0.85rem; line-height: 1.75; color: var(--text); margin-bottom: 2.5rem; flex-grow: 1; }
+    .creator-quote-text { font-size: 0.85rem; line-height: 1.75; color: var(--text); flex-grow: 1; }
+    .creator-quote-mini-mark { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); opacity: 0.4; line-height: 0.8; }
+    .creator-fave-quote {
+    margin-bottom: 2.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--brand);
+}
 @media (max-width: 960px) {
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }
   .services-header { grid-template-columns: 1fr; gap: 1.25rem; }
