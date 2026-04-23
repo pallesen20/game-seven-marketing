@@ -784,3 +784,10 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .calc-tab { font-size: 0.72rem; padding: 0.55rem 0.7rem; }
 }
+@media screen and (min-width: 767px) {
+  .analyzer-score-result {
+    display: flex;
+    gap: 1rem;
+    margin-top:0.6rem;
+  }
+}

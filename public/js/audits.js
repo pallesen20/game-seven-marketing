@@ -171,7 +171,7 @@ function renderResults(data, url) {
         '<div>' +
           '<div class="analyzer-score-label">SEO & Performance score</div>' +
           '<div class="analyzer-score-url">' + escHtml(display) + '</div>' +
-          '<div style="display:flex;gap:1rem;margin-top:0.6rem">' + scoreRow + '</div>' +
+          '<div class="analyzer-score-result">' + scoreRow + '</div>' +
         '</div>' +
       '</div>' +
       '<div class="analyzer-issues">' + issuesHtml + '</div>' +
