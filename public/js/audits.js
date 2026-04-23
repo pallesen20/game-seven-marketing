@@ -176,7 +176,7 @@ function renderResults(data, url) {
       '</div>' +
       '<div class="analyzer-issues">' + issuesHtml + '</div>' +
       '<div class="analyzer-cta-strip">' +
-        '<p>This is a surface-level automated check. A manual expert audit uncovers what tools miss.</p>' +
+        '<p>This is a surface-level automated check. A manual expert audit uncovers exactly what to fix to get more organic traffic and revenue. After fixing the audit findings, you should see results within 2-6 weeks. Get started today with an audit below!</p>' +
         '<div class="analyzer-cta-btns">' +
           '<a href="#pricing" class="btn-primary">Get an expert audit \u2192</a>' +
           '<a href="#pricing" class="btn-secondary">Browse all audits</a>' +
